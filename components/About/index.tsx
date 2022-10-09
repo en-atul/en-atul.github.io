@@ -22,14 +22,14 @@ const companiesDetails = [
 
 export function About() {
   return (
-    <section className="container mx-auto my-8">
+    <section className="container mx-auto my-16">
       <h1 className="text-center">About</h1>
       <section className="container mx-auto grid grid-cols-3 gap-8 my-8">
         {companiesDetails.map((company, idx) => {
           return (
             <article
               key={idx}
-              className="col-span-1 flex flex-col justify-center items-center p-10 bg-white"
+              className="col-span-1 flex flex-col justify-center items-center p-10 bg-white shadow-sm"
             >
               <Image
                 src="/images/building.png"

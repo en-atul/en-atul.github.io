@@ -52,14 +52,14 @@ const formatDateString = (y: number, m: number) => {
 
 export function Companies() {
   return (
-    <section className="grid grid-cols-3 gap-8 my-8">
+    <section className="grid grid-cols-3 gap-8 my-16">
       {companiesDetails.map((company, idx) => {
         const { months, years } = dateDiff(company.startDate, company.endDate);
 
         return (
           <article
             key={idx}
-            className="col-span-1 flex flex-col justify-center items-center p-10 bg-white"
+            className="col-span-1 flex flex-col justify-center items-center p-10 bg-white shadow-sm"
           >
             {/* <Image
               src={company.img}
@@ -76,7 +76,7 @@ export function Companies() {
             </p>
 
             <Link href="">
-              <p className="mt-4 text-blue-500">More Details</p>
+              <p className="mt-4 text-blue-500 font-light">More Details</p>
             </Link>
           </article>
         );

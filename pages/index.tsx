@@ -1,5 +1,11 @@
 import type { NextPage } from "next";
-import { CurrentlyAt, DefaultLayout, Experience, Footer } from "../components";
+import {
+  CurrentlyAt,
+  DefaultLayout,
+  Experience,
+  Footer,
+  Projects,
+} from "../components";
 import { About } from "../components/About";
 import { Contact } from "../components/Contact";
 
@@ -8,6 +14,7 @@ const Home: NextPage = () => {
     <DefaultLayout>
       <CurrentlyAt />
       <Experience />
+      <Projects />
       <About />
       {/* <Contact /> */}
       <Footer />

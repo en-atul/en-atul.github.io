@@ -3,59 +3,82 @@ import React from "react";
 const skills = [
   {
     label: "Reactjs",
+    borderColor: "border-cyan-500",
   },
   {
     label: "React Native",
+    borderColor: "border-cyan-500",
   },
   {
     label: "ReduxToolkit",
+    borderColor: "border-purple-500",
   },
   {
     label: "TailwindCSS",
-  },
-  {
-    label: "Storybook",
-  },
-  {
-    label: "rxjs",
-  },
-  {
-    label: "Nextjs",
-  },
-  {
-    label: "Nestjs",
-  },
-  {
-    label: "Nodejs",
+    borderColor: "border-cyan-500",
   },
   {
     label: "Jest",
-  },
-  {
-    label: "Reactjs",
+    borderColor: "border-red-800",
   },
   {
     label: "React Testing Library",
+    borderColor: "border-red-500",
   },
   {
     label: "Typescript",
+    borderColor: "border-blue-500",
+  },
+  {
+    label: "Javascript",
+    borderColor: "border-yellow-500",
   },
   {
     label: "Firebase",
+    borderColor: "border-yellow-500",
   },
   {
     label: "MongoDB",
+    borderColor: "border-green-500",
   },
   {
+    label: "Storybook",
+    borderColor: "border-pink-500",
+  },
+
+  {
+    label: "Nextjs",
+    borderColor: "border-black",
+  },
+  {
+    label: "rxjs",
+    borderColor: "border-pink-500",
+  },
+  {
+    label: "Nestjs",
+    borderColor: "border-pink-500",
+  },
+  {
+    label: "Nodejs",
+    borderColor: "border-green-600",
+  },
+
+  {
     label: "React Packages",
+    borderColor: "border-cyan-500",
   },
 ];
 
 export function Skills() {
   return (
-    <section className="my-8 grid grid-cols-6 gap-4">
+    <section className="my-16 grid grid-cols-6 gap-4">
       {skills.map((skill, idx) => (
-        <article key={idx} className="px-4 py-2 border-l-2 border-gray-200 bg-gradient-to-r from-gray-100 to-gray-200">{skill.label}</article>
+        <article
+          key={idx}
+          className={`px-4 py-2 border-l-2 ${skill.borderColor} bg-white shadow-sm`}
+        >
+          {skill.label}
+        </article>
       ))}
     </section>
   );

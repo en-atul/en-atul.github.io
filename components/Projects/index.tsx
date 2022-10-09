@@ -1,0 +1,140 @@
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+
+const projects = [
+  {
+    title: "What Are Odds",
+    type: "/images/mobile_app_development.png",
+    path: "",
+    description:
+      "It's a game app where opponent has to complete the challenge, if he lost",
+    thumbnail: "",
+    appLink: "",
+  },
+  {
+    title: "Wellnite",
+    type: "/images/web_app_development.png",
+
+    path: "",
+    description:
+      "Wellnite is a mental health app which helps people to overcome anxiety & depression",
+    thumbnail: "",
+    appLink: "https://www.wellnite.com/",
+  },
+  {
+    title: "Estate",
+    type: "/images/web_app_development.png",
+
+    path: "",
+    description: `Estate Plus helps With Probate, Letters of Admininstration Creating Your Will & Cremations in Australia. It comes with two app versions web and mobile.`,
+    thumbnail: "",
+    appLink: "https://www.estatesplus.com.au/",
+  },
+  {
+    title: "Family Law Assist",
+    type: "/images/web_app_development.png",
+
+    path: "",
+    description:
+      "Family Law Assist helps Australian people settle the assets & debts, between the partners after divorce. It provides services like consent orders, legal representation, and negotiation.",
+    thumbnail: "",
+    appLink: "https://online.familylawassist.com.au",
+  },
+  {
+    title: "Resolvy",
+    type: "/images/web_app_development.png",
+
+    path: "",
+    description:
+      "Resolvy helps separated and divorced couples to understand the options about splitting assets, dividing the family home, superannuation, sharing custody of your children and much more.",
+    thumbnail: "",
+    appLink: "https://www.resolvy.com.au/",
+  },
+  {
+    title: "DOPE SECURITY",
+    type: "/images/web_app_development.png",
+
+    path: "",
+    description: `Dope Security is a secure web gateway (SWG) app is designed to filter, or block access to harmful websites and applications per company policy.`,
+    thumbnail: "",
+    appLink: "https://dope.security/",
+  },
+  {
+    title: "Supermanage",
+    type: "/images/mobile_app_development.png",
+    path: "",
+    description: `Supermanage is the all in one best free staff management solution for business.
+    It offers a quick & easy way to record attendance, employee advances, overtime and remarks for your employees.
+    Under the report section of the platform users of the platform can download all the reports related to payroll, advances, overtime and remarks in PDF and excel formats.`,
+    thumbnail: "",
+    appLink:
+      "https://play.google.com/store/apps/details?id=com.business.supermanage.android",
+  },
+  {
+    title: "Satoshi Solutions",
+    type: "/images/web_app_development.png",
+
+    path: "",
+    description: `Satoshi Solutions is a crypto specialist recruitment app.`,
+    thumbnail: "",
+    appLink: "https://satoshisolutions.xyz/",
+  },
+  {
+    title: "Paribesh",
+    type: "/images/mobile_app_development.png",
+    path: "",
+    description: `It's a mobile app which gives news about environment status (i.e. air pollution, water pollution and noise pollution) and any environment initiative. `,
+    thumbnail: "",
+    appLink:
+      "https://play.google.com/store/apps/details?id=in.gov.wbpcb.paribeshapp",
+  },
+];
+
+export function Projects() {
+  return (
+    <section className="container mx-auto my-16">
+      <h1 className="text-center">Projects</h1>
+      <section className="my-16 grid grid-cols-3 gap-4">
+        {projects.map((p, idx) => (
+          <article key={idx} className="bg-white p-10">
+            <div className="flex justify-between ">
+              <p className="text-xl">{p.title}</p>
+              <Image src={p.type} width={25} height={25} alt={p.title} />
+            </div>
+
+            <p className="text-gray-500 mt-4">{p.description}</p>
+            {/* <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6 mr-3"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                  />
+                </svg> */}
+            <div className="flex items-center space-x-3">
+              {p.appLink ? (
+                <a
+                  href={p.appLink}
+                  className="mt-4 text-blue-500 font-light transition-all border-b border-white hover:border-blue-500"
+                  target="_blank"
+                >
+                  Go to App
+                </a>
+              ) : null}
+              <Link href="">
+                <p className="mt-4 text-blue-500 font-light">More Details</p>
+              </Link>
+            </div>
+          </article>
+        ))}
+      </section>
+    </section>
+  );
+}
