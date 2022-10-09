@@ -11,6 +11,7 @@ const companiesDetails = [
     duartion: "Oct 2020 - Present ·",
     startDate: new Date("10-01-2020"),
     endDate: new Date(),
+    path: "/work/wellnite",
   },
   {
     name: "Steinnlabs",
@@ -19,6 +20,7 @@ const companiesDetails = [
     duartion: "Mar 2021 - Jul 2022 ·",
     startDate: new Date("03-01-2021"),
     endDate: new Date("07-31-2022"),
+    path: "/work/steinnlabs",
   },
   {
     name: "MKI Legal",
@@ -27,6 +29,7 @@ const companiesDetails = [
     duartion: "Apr 2021 - Jun 2022 ·",
     startDate: new Date("04-01-2020"),
     endDate: new Date("06-30-2021"),
+    path: "/work/mki-legal",
   },
   {
     name: "Distronix",
@@ -35,6 +38,7 @@ const companiesDetails = [
     duartion: "Jun 2020 - Sep 2020 ·",
     startDate: new Date("06-01-2020"),
     endDate: new Date("09-30-2020"),
+    path: "/work/distronix",
   },
 ];
 
@@ -75,8 +79,10 @@ export function Companies() {
               {company.duartion} {formatDateString(years, months)}
             </p>
 
-            <Link href="">
-              <p className="mt-4 text-blue-500 font-light">More Details</p>
+            <Link href={company.path}>
+              <p className="mt-4 text-blue-500 font-light border-b border-white hover:border-blue-500 cursor-pointer">
+                More Details
+              </p>
             </Link>
           </article>
         );
