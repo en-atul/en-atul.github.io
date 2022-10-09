@@ -70,6 +70,7 @@ export default function Steinnlabs() {
         <a
           href="https://www.steinnlabs.com/"
           target="_blank"
+          rel="noopener noreferrer"
           className="hover:text-blue-600"
         >
           <article className="flex items-center space-x-2">

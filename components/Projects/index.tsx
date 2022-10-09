@@ -105,6 +105,7 @@ export function Projects() {
                   href={p.appLink}
                   className="mt-4 text-blue-500 font-light transition-all border-b border-white hover:border-blue-500"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Go to App
                 </a>

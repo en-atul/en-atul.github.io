@@ -9,18 +9,20 @@ export function Footer() {
           <a
             href="https://www.linkedin.com/in/atul-b98221172/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             LinkedIn
           </a>
         </li>
         <li className="mx-3 border-b border-gray-700">
-          <a rel="noreferrer" target="_blank" download>
+          <a rel="noopener noreferrer" target="_blank" download>
             Resume
           </a>
         </li>
         <li className="mx-3 border-b border-gray-700">
-          <a href="mailto: atkr3001@gmail.com">Email</a>
+          <a href="mailto: atkr3001@gmail.com" rel="noopener noreferrer">
+            Email
+          </a>
         </li>
       </ul>
     </footer>

@@ -54,6 +54,7 @@ export default function MKILegal() {
         <a
           href="https://www.perthemploymentlawyers.com.au/"
           target="_blank"
+          rel="noopener noreferrer"
           className="hover:text-blue-600"
         >
           <article className="flex items-center space-x-2">

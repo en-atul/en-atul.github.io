@@ -69,6 +69,7 @@ export default function Wellnite() {
         <a
           href="https://wellnite.com"
           target="_blank"
+          rel="noopener noreferrer"
           className="hover:text-blue-600"
         >
           <article className="flex items-center space-x-2">
