@@ -11,7 +11,7 @@ export function DesktopHeader() {
       <section className="container h-full mx-auto flex justify-between items-center">
         <Link href="/">
           <p className="cursor-pointer transition-all hover:text-gray-700">
-            Atul's Portfolio
+            Atul&apos;s Portfolio
           </p>
         </Link>
         {r === "work" ? (

@@ -92,7 +92,7 @@ export default function Wellnite() {
         </a>
 
         <p className="mt-10 text-gray-700">
-          Wellnite is a mental health platform, aim's to make high-quality
+          Wellnite is a mental health platform, aim&apos;s to make high-quality
           mental healthcare accessible to everyone. Wellnite makes it accessible
           and frictionless for everyone to take action and overcome anxiety and
           depression.

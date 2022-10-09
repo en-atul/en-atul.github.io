@@ -14,7 +14,7 @@ export function CurrentlyAt() {
         area of web development & Mobile application development using react.
         Graduated from Bengal college of engineering and technology Integrated
         Bachelors course of Computer science which has prepared me for a career
-        in the field of IT. I'm a fast learner and can easily adapt to any work
+        in the field of IT. I&apos;m a fast learner and can easily adapt to any work
         environment and always want to be a part of a company that values
         quality, performance and ethics. I believe this would help me explore
         new avenues and allow myself to build an experience for a long time.

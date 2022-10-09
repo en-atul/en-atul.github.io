@@ -3,7 +3,7 @@ import React from "react";
 export function Footer() {
   return (
     <footer className="container mx-auto py-8">
-      <p className="text-black text-3xl mb-4">Let's Connect</p>
+      <p className="text-black text-3xl mb-4">Let&apos;s Connect</p>
       <ul className="list-none flex items-center text-black text-lg">
         <li className="mr-3 border-b border-gray-700">
           <a
