@@ -22,7 +22,7 @@ const companiesDetails = [
 
 export function About() {
   return (
-    <section className="container mx-auto my-16">
+    <section id="about" className="container mx-auto my-16">
       <h1 className="text-center">About/Education</h1>
       <section className="container mx-auto grid grid-cols-3 gap-8 my-8">
         {companiesDetails.map((company, idx) => {

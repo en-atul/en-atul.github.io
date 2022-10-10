@@ -71,11 +71,11 @@ const skills = [
 
 export function Skills() {
   return (
-    <section className="my-16 grid grid-cols-6 gap-4">
+    <section className="my-16 flex flex-wrap justify-center gap-4">
       {skills.map((skill, idx) => (
         <article
           key={idx}
-          className={`px-4 py-2 border-l-2 ${skill.borderColor} bg-white shadow-sm`}
+          className={`px-4 py-2 w-[15%] border-l-2 ${skill.borderColor} bg-white shadow-sm`}
         >
           {skill.label}
         </article>

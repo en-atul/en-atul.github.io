@@ -37,11 +37,27 @@ export function DesktopHeader() {
             <li>{app}</li>
           </ul>
         ) : (
-          <ul className="flex items-center space-x-6 ">
-            <li>Experience</li>
-            <li>Projects</li>
-            <li>About</li>
-            <li>Contact</li>
+          <ul className="flex items-center main-nav">
+            <li>
+              <a href="#experience" rel="noopener noreferrer">
+                Experience
+              </a>
+            </li>
+            <li>
+              <a href="#projects" rel="noopener noreferrer">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="#about" rel="noopener noreferrer">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#contact" rel="noopener noreferrer">
+                Contact
+              </a>
+            </li>
           </ul>
         )}
       </section>

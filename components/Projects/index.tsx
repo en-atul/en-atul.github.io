@@ -87,7 +87,7 @@ const projects = [
 
 export function Projects() {
   return (
-    <section className="container mx-auto my-16">
+    <section id="projects" className="container mx-auto my-16">
       <h1 className="text-center">Projects</h1>
       <section className="my-16 grid grid-cols-3 gap-4">
         {projects.map((p, idx) => (

@@ -56,14 +56,17 @@ const formatDateString = (y: number, m: number) => {
 
 export function Companies() {
   return (
-    <section className="grid grid-cols-3 gap-8 my-16">
+    <section
+      id="experience"
+      className="flex flex-wrap justify-center gap-8 my-16"
+    >
       {companiesDetails.map((company, idx) => {
         const { months, years } = dateDiff(company.startDate, company.endDate);
 
         return (
           <article
             key={idx}
-            className="col-span-1 flex flex-col justify-center items-center p-10 bg-white shadow-sm"
+            className="w-[30%] flex flex-col justify-center items-center p-10 bg-white shadow-sm"
           >
             {/* <Image
               src={company.img}
