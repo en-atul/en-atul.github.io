@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useCallback } from "react";
+import React from "react";
 import { DefaultLayout } from "../../components";
 
 const skills = [
@@ -58,35 +58,35 @@ const skills = [
 
 const app = [
   {
-    path: "/images/app/wellnite/1.png",
+    path: "/images/app/wellnite/1.webp",
     title: "Dashboard",
   },
   {
-    path: "/images/app/wellnite/2.png",
+    path: "/images/app/wellnite/2.webp",
     title: "Appointment Duration",
   },
   {
-    path: "/images/app/wellnite/3.png",
+    path: "/images/app/wellnite/3.webp",
     title: "Select Provider for Appointment",
   },
   {
-    path: "/images/app/wellnite/4.png",
+    path: "/images/app/wellnite/4.webp",
     title: "Select Appointment Date",
   },
   {
-    path: "/images/app/wellnite/5.png",
+    path: "/images/app/wellnite/5.webp",
     title: "Appointment Booked",
   },
   {
-    path: "/images/app/wellnite/6.png",
+    path: "/images/app/wellnite/6.webp",
     title: "Upcoming Appointment",
   },
   {
-    path: "/images/app/wellnite/7.png",
+    path: "/images/app/wellnite/7.webp",
     title: "Appointment Call With Provider",
   },
   {
-    path: "/images/app/wellnite/8.png",
+    path: "/images/app/wellnite/8.webp",
     title: "Plans",
   },
 ];
