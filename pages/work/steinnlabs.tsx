@@ -57,6 +57,41 @@ const skills = [
   },
 ];
 
+const supermanageApp = [
+  {
+    path: "/images/app/steinnlabs/supermanage/1.webp",
+    title: "Dashboard",
+  },
+  {
+    path: "/images/app/steinnlabs/supermanage/2.webp",
+    title: "Appointment Duration",
+  },
+  {
+    path: "/images/app/steinnlabs/supermanage/3.webp",
+    title: "Select Provider for Appointment",
+  },
+  {
+    path: "/images/app/steinnlabs/supermanage/4.webp",
+    title: "Select Appointment Date",
+  },
+  {
+    path: "/images/app/steinnlabs/supermanage/5.webp",
+    title: "Appointment Booked",
+  },
+  {
+    path: "/images/app/steinnlabs/supermanage/6.webp",
+    title: "Upcoming Appointment",
+  },
+  {
+    path: "/images/app/steinnlabs/supermanage/7.webp",
+    title: "Appointment Call With Provider",
+  },
+  {
+    path: "/images/app/steinnlabs/supermanage/8.webp",
+    title: "Plans",
+  },
+];
+
 export default function Steinnlabs() {
   return (
     <DefaultLayout>
@@ -196,6 +231,22 @@ export default function Steinnlabs() {
               download all the reports related to payroll, advances, overtime
               and remarks in PDF and excel formats.
             </p>
+            <h3 className="mt-5 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500">
+              App Overview
+            </h3>
+            <section className="wrapper w-full flex flex-wrap gap-4 mt-4 justify-center">
+              {supermanageApp.map((s, idx) => (
+                <article
+                  key={idx}
+                  className="item w-[20%] h-[550px] relative flex flex-col mb-7"
+                >
+                  <div className="relative w-full h-full">
+                    <Image src={s.path} layout="fill" alt={s.title} quality={1} />
+                  </div>
+                  <p className="text-center my-3">{s.title}</p>
+                </article>
+              ))}
+            </section>
             <h3 className="mt-5 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-gray-500">
               Team Members
             </h3>

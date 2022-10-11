@@ -154,19 +154,21 @@ export default function Wellnite() {
         <h3 className="mt-5 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500">
           App Overview
         </h3>
-        <section className="w-full flex flex-wrap gap-4 mt-4 justify-center">
+        <section className="wrapper w-full flex flex-wrap gap-4 mt-4 justify-center">
           {app.map((s, idx) => (
-            <article key={idx} className="w-[30%] h-72 relative flex flex-col">
+            <article
+              key={idx}
+              className="item w-[30%] h-72 relative flex flex-col mb-7"
+            >
               <div className="relative w-full h-full">
                 <Image
                   src={s.path}
                   layout="fill"
-                  // objectFit="contain"
                   alt={s.title}
                   priority
                 />
               </div>
-              <p className="text-center mt-3 mb-10">{s.title}</p>
+              <p className="text-center my-3">{s.title}</p>
             </article>
           ))}
         </section>

@@ -85,28 +85,25 @@ a {
   transition: transform 0.3s var(--easing);
   transform: translateX(100%);
 }
-.react-flow__node-zoom {
-  font-size: 12px;
-  background: #fff;
-  border: 1px solid #555;
-  border-radius: 5px;
-  text-align: center;
-  width: 150px;
-  padding: 10px;
-  line-height: 1.2;
+
+
+
+/* to scale the app screenshot */
+.item {
+  transition: transform 500ms;
 }
 
-.react-flow__node-zoom img {
-  pointer-events: none;
+.wrapper .item:focus,
+.wrapper .item:hover {
+  transform: scale(2);
+  z-index: 1;
+  border:0.5px solid rgb(221, 221, 221);
+  background:rgb(255, 255, 255);
+  box-shadow: 10px 10px 23px -6px rgba(189,179,189,1);
+
 }
 
-.placeholder div {
-  background: #eee;
-  width: 100%;
-  height: 10px;
-  margin-bottom: 4px;
-}
-
-.placeholder div:last-child {
-  margin-bottom: 0;
+.item img {
+  display: block;
+  max-width: 100%;
 }
