@@ -243,7 +243,7 @@ export default function Steinnlabs() {
                   <div className="relative w-full h-full">
                     <Image src={s.path} layout="fill" alt={s.title} quality={1} />
                   </div>
-                  <p className="text-center my-3">{s.title}</p>
+                  {/* <p className="text-center my-3">{s.title}</p> */}
                 </article>
               ))}
             </section>
