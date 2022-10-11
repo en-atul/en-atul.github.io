@@ -69,7 +69,7 @@ export default function Distronix() {
         </p>
 
         <h3 className="mt-5 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-gray-500">
-          Services Provides by Distronix
+          Services Provide by Distronix
         </h3>
         <section className="flex justify-start items-center space-x-5 mt-4">
           <article className="px-4 py-1 rounded-full border border-gray-300">
