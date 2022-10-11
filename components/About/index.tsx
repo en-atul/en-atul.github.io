@@ -36,6 +36,7 @@ export function About() {
                 width={50}
                 height={50}
                 alt={company.name}
+                priority
               />
 
               <p className="text-xl mt-5">{company.name}</p>

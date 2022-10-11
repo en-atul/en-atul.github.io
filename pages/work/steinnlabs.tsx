@@ -65,7 +65,8 @@ export default function Steinnlabs() {
           src="/images/steinnlabs.jpeg"
           width={100}
           height={100}
-          alt="wellnite logo"
+          alt="steinnlabs logo"
+          priority
         />
         <a
           href="https://www.steinnlabs.com/"

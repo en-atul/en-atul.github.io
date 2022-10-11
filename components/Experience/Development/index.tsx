@@ -37,7 +37,13 @@ export function Development() {
             key={idx}
             className="w-[30%] flex flex-col justify-center items-center p-10 bg-white shadow-sm"
           >
-            <Image src={company.img} width={50} height={50} alt={company.img} />
+            <Image
+              src={company.img}
+              width={50}
+              height={50}
+              alt={company.img}
+              priority
+            />
             <p className="text-xl mt-5">{company.name}</p>
             <p className="text-center mt-2">{company.role}</p>
           </article>

@@ -33,7 +33,8 @@ export default function Distronix() {
           src="/images/distronix.jpeg"
           width={100}
           height={100}
-          alt="wellnite logo"
+          alt="distronix logo"
+          priority
         />
         <a
           href="http://distronix.in/"

@@ -1,11 +1,12 @@
-{"homepage": "https://atul15r.github.io/portfolio-v2",
+{
+  "homepage": "https://atul15r.github.io/portfolio-v2",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "deploy":"gh-pages -d build",
-    "predeploy":"npm run build",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

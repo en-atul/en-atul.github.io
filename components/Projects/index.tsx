@@ -94,7 +94,13 @@ export function Projects() {
           <article key={idx} className="bg-white p-10">
             <div className="flex justify-between ">
               <p className="text-xl">{p.title}</p>
-              <Image src={p.type} width={25} height={25} alt={p.title} />
+              <Image
+                src={p.type}
+                width={25}
+                height={25}
+                alt={p.title}
+                priority
+              />
             </div>
 
             <p className="text-gray-500 mt-4">{p.description}</p>

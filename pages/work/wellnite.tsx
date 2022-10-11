@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useCallback } from "react";
 import { DefaultLayout } from "../../components";
 
 const skills = [
@@ -56,6 +56,41 @@ const skills = [
   },
 ];
 
+const app = [
+  {
+    path: "/images/app/wellnite/1.png",
+    title: "Dashboard",
+  },
+  {
+    path: "/images/app/wellnite/2.png",
+    title: "Appointment Duration",
+  },
+  {
+    path: "/images/app/wellnite/3.png",
+    title: "Select Provider for Appointment",
+  },
+  {
+    path: "/images/app/wellnite/4.png",
+    title: "Select Appointment Date",
+  },
+  {
+    path: "/images/app/wellnite/5.png",
+    title: "Appointment Booked",
+  },
+  {
+    path: "/images/app/wellnite/6.png",
+    title: "Upcoming Appointment",
+  },
+  {
+    path: "/images/app/wellnite/7.png",
+    title: "Appointment Call With Provider",
+  },
+  {
+    path: "/images/app/wellnite/8.png",
+    title: "Plans",
+  },
+];
+
 export default function Wellnite() {
   return (
     <DefaultLayout>
@@ -65,6 +100,7 @@ export default function Wellnite() {
           width={100}
           height={100}
           alt="wellnite logo"
+          priority
         />
         <a
           href="https://wellnite.com"
@@ -115,7 +151,25 @@ export default function Wellnite() {
             Cancel Subscription
           </article>
         </section>
-
+        <h3 className="mt-5 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500">
+          App Overview
+        </h3>
+        <section className="w-full flex flex-wrap gap-4 mt-4 justify-center">
+          {app.map((s, idx) => (
+            <article key={idx} className="w-[30%] h-72 relative flex flex-col">
+              <div className="relative w-full h-full">
+                <Image
+                  src={s.path}
+                  layout="fill"
+                  // objectFit="contain"
+                  alt={s.title}
+                  priority
+                />
+              </div>
+              <p className="text-center mt-3 mb-10">{s.title}</p>
+            </article>
+          ))}
+        </section>
         <h3 className="mt-5 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500">
           My Responsibilities
         </h3>

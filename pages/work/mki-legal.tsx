@@ -49,7 +49,8 @@ export default function MKILegal() {
           src="/images/mki-legal.jpeg"
           width={100}
           height={100}
-          alt="wellnite logo"
+          alt="mki legal logo"
+          priority
         />
         <a
           href="https://www.perthemploymentlawyers.com.au/"
