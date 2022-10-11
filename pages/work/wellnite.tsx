@@ -135,7 +135,7 @@ export default function Wellnite() {
         </p>
 
         <h3 className="mt-5 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500">
-          Facility Provides by Wellnite to their members
+          Services Provides by Wellnite to their members
         </h3>
         <section className="flex justify-start items-center space-x-5 mt-4">
           <article className="px-4 py-1 rounded-full border border-gray-300">

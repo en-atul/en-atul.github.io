@@ -81,7 +81,7 @@ export default function MKILegal() {
         </p>
 
         <h3 className="mt-5 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-gray-500">
-          Facility Provides by MKI Legal
+          Services Provides by MKI Legal
         </h3>
         <section className="flex justify-start items-center space-x-5 mt-4">
           <article className="px-4 py-1 rounded-full border border-gray-300">
