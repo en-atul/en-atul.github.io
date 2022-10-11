@@ -41,6 +41,32 @@ const skills = [
   },
 ];
 
+const estateApp = [
+  {
+    path: "/images/app/mkilegal/estate/1.png",
+    title: "Login Page",
+  },
+  {
+    path: "/images/app/mkilegal/estate/2.png",
+    title: "Invite Admin Page",
+  },
+  {
+    path: "/images/app/mkilegal/estate/3.png",
+    title: "Policy Details & Update Page",
+  },
+];
+
+const familylawApp = [
+  {
+    path: "/images/app/mkilegal/familylaw/1.png",
+    title: "Login Page",
+  },
+  {
+    path: "/images/app/mkilegal/familylaw/2.png",
+    title: "Invite Admin Page",
+  },
+];
+
 export default function MKILegal() {
   return (
     <DefaultLayout>
@@ -108,7 +134,134 @@ export default function MKILegal() {
           <li>Write endpoints</li>
           <li>Stay up to date with current best practices</li>
         </ul>
-
+        <h1 className="mt-8 text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-gray-500">
+          Projects
+        </h1>
+        <ul className="list-decimal pl-7 mt-4 space-y-5">
+          <li>
+            <span className="flex">
+              Estate |&nbsp;
+              <a
+                href="https://www.estatesplus.com.au/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-600"
+              >
+                <article className="flex items-center space-x-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-4 h-4"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                    />
+                  </svg>
+                  <p>Website</p>
+                </article>
+              </a>
+            </span>{" "}
+            <p className="my-3 text-gray-700">
+              Estate Plus helps With Probate, Letters of Admininstration
+              Creating Your Will & Cremations in Australia.
+            </p>
+            <h3 className="mt-5 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500">
+              App Overview
+            </h3>
+            <section className="wrapper w-full flex flex-wrap gap-4 mt-4 justify-center">
+              {estateApp.map((s, idx) => (
+                <article
+                  key={idx}
+                  className="item w-[30%] h-[450px] relative flex flex-col mb-7"
+                >
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={s.path}
+                      layout="fill"
+                      alt={s.title}
+                      quality={1}
+                    />
+                  </div>
+                  <p className="text-center my-3">{s.title}</p>
+                </article>
+              ))}
+            </section>
+            <h3 className="mt-5 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-gray-500">
+              Team Members
+            </h3>
+            <ul className="list-disc pl-4">
+              <li>Atul Kumar (Frontend Developer)</li>
+              <li>James Threfall (UI/UX)</li>
+            </ul>
+          </li>
+          <li>
+            <span className="flex">
+              Family Law Assist |&nbsp;
+              <a
+                href="https://online.familylawassist.com.au/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-600"
+              >
+                <article className="flex items-center space-x-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-4 h-4"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                    />
+                  </svg>
+                  <p>Website</p>
+                </article>
+              </a>
+            </span>{" "}
+            <p className="my-3 text-gray-700">
+              Family Law Assist helps Australian people settle the assets &
+              debts, between the partners after divorce. It provides services
+              like consent orders, legal representation, and negotiation.
+            </p>
+            <h3 className="mt-5 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500">
+              App Overview
+            </h3>
+            <section className="wrapper w-full flex flex-wrap gap-4 mt-4 justify-center">
+              {familylawApp.map((s, idx) => (
+                <article
+                  key={idx}
+                  className="item w-[30%] h-[450px] relative flex flex-col mb-7"
+                >
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={s.path}
+                      layout="fill"
+                      alt={s.title}
+                      quality={1}
+                    />
+                  </div>
+                  {/* <p className="text-center my-3">{s.title}</p> */}
+                </article>
+              ))}
+            </section>
+            <h3 className="mt-5 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-gray-500">
+              Team Members
+            </h3>
+            <ul className="list-disc pl-4">
+              <li>Atul Kumar (Frontend Developer)</li>
+              <li>James Threfall (UI/UX)</li>
+            </ul>
+          </li>
+        </ul>
         <h3 className="mt-5 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-gray-500">
           Team Members
         </h3>
