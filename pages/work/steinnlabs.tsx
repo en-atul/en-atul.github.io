@@ -91,7 +91,108 @@ const supermanageApp = [
     title: "Plans",
   },
 ];
+const dopeApp = [
+  {
+    path: "/images/app/steinnlabs/dope/1.png",
+    title: "Login Page",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/2.png",
+    title: "Invite Admin Page",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/3.png",
+    title: "Policy Details & Update Page",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/4.png",
+    title: "Policy list & Create Page",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/5.png",
+    title: "Policy Assignment Page",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/6.png",
+    title: "Add Bypass Url Page",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/7.png",
+    title: "Imported Users/Groups Page",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/8.png",
+    title: "Custom Block Page Template",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/9.png",
+    title: "Default Block Page List",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/11.png",
+    title: "Overview Page",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/12.png",
+    title: "Shadow IT",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/13.png",
+    title: "Productivity Page",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/14.png",
+    title: "Policy Page",
+  },
+];
 
+const dopeDetailsApp = [
+  {
+    path: "/images/app/steinnlabs/dope/15.png",
+    title: "Login Page",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/16.png",
+    title: "Invite Admin Page",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/17.png",
+    title: "Policy Details & Update Page",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/18.png",
+    title: "Policy list & Create Page",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/19.png",
+    title: "Policy Assignment Page",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/20.png",
+    title: "Add Bypass Url Page",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/21.png",
+    title: "Imported Users/Groups Page",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/22.png",
+    title: "Custom Block Page Template",
+  },
+
+  {
+    path: "/images/app/steinnlabs/dope/23.png",
+    title: "Overview Page",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/24.png",
+    title: "Shadow IT",
+  },
+  {
+    path: "/images/app/steinnlabs/dope/25.png",
+    title: "Productivity Page",
+  },
+];
 export default function Steinnlabs() {
   return (
     <DefaultLayout>
@@ -182,12 +283,77 @@ export default function Steinnlabs() {
         </h1>
         <ul className="list-decimal pl-7 mt-4 space-y-5">
           <li>
-            DOPE SECURITY
+            <span className="flex">
+              DOPE SECURITY |&nbsp;
+              <a
+                href="https://dope.security/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-600"
+              >
+                <article className="flex items-center space-x-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-4 h-4"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                    />
+                  </svg>
+                  <p>Website</p>
+                </article>
+              </a>
+            </span>{" "}
             <p className="my-3 text-gray-700">
               Dope Security is a secure web gateway (SWG) app is designed to
               filter, or block access to harmful websites and applications per
               company policy.
             </p>
+            <h3 className="mt-5 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500">
+              App Overview
+            </h3>
+            <section className="wrapper w-full flex flex-wrap gap-4 mt-4 justify-center">
+              {dopeApp.map((s, idx) => (
+                <article
+                  key={idx}
+                  className="item w-[30%] h-72 relative flex flex-col mb-7"
+                >
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={s.path}
+                      layout="fill"
+                      alt={s.title}
+                      quality={1}
+                    />
+                  </div>
+                  <p className="text-center my-3">{s.title}</p>
+                </article>
+              ))}
+            </section>
+            <section className="wrapper w-full flex flex-wrap gap-4 mt-4 justify-center">
+              {dopeDetailsApp.map((s, idx) => (
+                <article
+                  key={idx}
+                  className="item w-[30%] h-[500px] relative flex flex-col mb-7"
+                >
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={s.path}
+                      layout="fill"
+                      alt={s.title}
+                      quality={1}
+                    />
+                  </div>
+                  {/* <p className="text-center my-3">{s.title}</p> */}
+                </article>
+              ))}
+            </section>
             <h3 className="mt-5 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-gray-500">
               Team Members
             </h3>
@@ -204,7 +370,33 @@ export default function Steinnlabs() {
             </ul>
           </li>
           <li>
-            CHANNLWORKS
+            <span className="flex">
+              CHANNLWORKS |&nbsp;
+              <a
+                href="https://www.channlworks.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-600"
+              >
+                <article className="flex items-center space-x-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-4 h-4"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                    />
+                  </svg>
+                  <p>Website</p>
+                </article>
+              </a>
+            </span>
             <p className="my-3 text-gray-700">
               ChannlWorks is a SaaS platform, built grounds up specifically for
               your alliance management needs. Use ChannlWorks to efficiently
@@ -216,13 +408,39 @@ export default function Steinnlabs() {
               Team Members
             </h3>
             <ul className="list-disc pl-4">
-              <li>Atul Kumar (Lead Frontend Developer)</li>
+              <li>Atul Kumar (Frontend Developer)</li>
               <li>Salman Khan (Backend Developer)</li>
               <li>Ashish choudhary (QA Engineer)</li>
             </ul>
           </li>
           <li>
-            Supermanage
+            <span className="flex">
+              Supermanage |&nbsp;
+              <a
+                href="https://play.google.com/store/apps/details?id=com.business.supermanage.android"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-600"
+              >
+                <article className="flex items-center space-x-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-4 h-4"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                    />
+                  </svg>
+                  <p>Website</p>
+                </article>
+              </a>
+            </span>
             <p className="my-3 text-gray-700">
               Supermanage is the all in one best free staff management solution
               for business. It offers a quick & easy way to record attendance,
@@ -234,14 +452,19 @@ export default function Steinnlabs() {
             <h3 className="mt-5 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500">
               App Overview
             </h3>
-            <section className="wrapper w-full flex flex-wrap gap-4 mt-4 justify-center">
+            <section className="w-full flex flex-wrap gap-4 mt-4 justify-center">
               {supermanageApp.map((s, idx) => (
                 <article
                   key={idx}
-                  className="item w-[20%] h-[550px] relative flex flex-col mb-7"
+                  className="w-[20%] h-[500px] relative flex flex-col mb-7"
                 >
                   <div className="relative w-full h-full">
-                    <Image src={s.path} layout="fill" alt={s.title} quality={1} />
+                    <Image
+                      src={s.path}
+                      layout="fill"
+                      alt={s.title}
+                      quality={1}
+                    />
                   </div>
                   {/* <p className="text-center my-3">{s.title}</p> */}
                 </article>
@@ -251,7 +474,8 @@ export default function Steinnlabs() {
               Team Members
             </h3>
             <ul className="list-disc pl-4">
-              <li>Atul Kumar (Lead Frontend Developer)</li>
+              <li>Atul Kumar (Frontend Developer)</li>
+              <li>Santosh (Backend Developer)</li>
             </ul>
           </li>
         </ul>
