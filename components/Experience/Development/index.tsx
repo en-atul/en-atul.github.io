@@ -1,29 +1,33 @@
 import React from "react";
 import Image from "next/image";
+import WebDevelopment from "../../../public/images/web_app_development.png";
+import MobileAppDevelopment from "../../../public/images/mobile_app_development.png";
+import BackendDevelopment from "../../../public/images/backend_development.png";
+import E2ETesting from "../../../public/images/e2e_testing.png";
 
 const companiesDetails = [
   {
     name: "Web App Development",
     role: "Reactjs | ReduxToolkit | Typescript | Javascript | TailwindCSS | Web Accessibility | Next.js | rxjs",
-    img: "/images/web_app_development.png",
+    img: WebDevelopment,
     duartion: "Oct 2020 - Present ·",
   },
   {
     name: "Mobile App Development",
     role: "React Native | ReduxToolkit | Typescript | Javascript",
-    img: "/images/mobile_app_development.png",
+    img: MobileAppDevelopment,
     duartion: "Mar 2021 - Jul 2022 ·",
   },
   {
     name: "Backend Development",
     role: "Nodejs | Nestjs | Typescript | Javascript",
-    img: "/images/backend_development.png",
+    img: BackendDevelopment,
     duartion: "Apr 2021 - Jun 2022 ·",
   },
   {
     name: "E2E Testing",
     role: "Jest | React Testing Library",
-    img: "/images/e2e_testing.png",
+    img: E2ETesting,
     duartion: "Apr 2021 - Jun 2022 ·",
   },
 ];
@@ -41,8 +45,9 @@ export function Development() {
               src={company.img}
               width={50}
               height={50}
-              alt={company.img}
+              alt={company.name}
               priority
+              placeholder="blur"
             />
             <p className="text-xl mt-5">{company.name}</p>
             <p className="text-center mt-2">{company.role}</p>
