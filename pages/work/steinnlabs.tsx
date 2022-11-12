@@ -1,6 +1,33 @@
 import Image from "next/image";
 import React from "react";
 import { DefaultLayout } from "../../components";
+import Logo from "../../public/images/steinnlabs.jpeg";
+
+import D1 from "../../public/images/app/steinnlabs/dope/1.png";
+import D2 from "../../public/images/app/steinnlabs/dope/2.png";
+import D3 from "../../public/images/app/steinnlabs/dope/3.png";
+import D4 from "../../public/images/app/steinnlabs/dope/4.png";
+import D5 from "../../public/images/app/steinnlabs/dope/5.png";
+import D6 from "../../public/images/app/steinnlabs/dope/6.png";
+import D7 from "../../public/images/app/steinnlabs/dope/7.png";
+import D8 from "../../public/images/app/steinnlabs/dope/8.png";
+import D9 from "../../public/images/app/steinnlabs/dope/9.png";
+import D10 from "../../public/images/app/steinnlabs/dope/11.png";
+import D11 from "../../public/images/app/steinnlabs/dope/12.png";
+import D12 from "../../public/images/app/steinnlabs/dope/13.png";
+import D13 from "../../public/images/app/steinnlabs/dope/14.png";
+
+import DD15 from "../../public/images/app/steinnlabs/dope/15.png";
+import DD16 from "../../public/images/app/steinnlabs/dope/16.png";
+import DD17 from "../../public/images/app/steinnlabs/dope/17.png";
+import DD18 from "../../public/images/app/steinnlabs/dope/18.png";
+import DD19 from "../../public/images/app/steinnlabs/dope/19.png";
+import DD20 from "../../public/images/app/steinnlabs/dope/20.png";
+import DD21 from "../../public/images/app/steinnlabs/dope/21.png";
+import DD22 from "../../public/images/app/steinnlabs/dope/22.png";
+import DD23 from "../../public/images/app/steinnlabs/dope/23.png";
+import DD24 from "../../public/images/app/steinnlabs/dope/24.png";
+import DD25 from "../../public/images/app/steinnlabs/dope/25.png";
 
 const skills = [
   {
@@ -93,103 +120,103 @@ const supermanageApp = [
 ];
 const dopeApp = [
   {
-    path: "/images/app/steinnlabs/dope/1.png",
+    path: D1,
     title: "Login Page",
   },
   {
-    path: "/images/app/steinnlabs/dope/2.png",
+    path: D2,
     title: "Invite Admin Page",
   },
   {
-    path: "/images/app/steinnlabs/dope/3.png",
+    path: D3,
     title: "Policy Details & Update Page",
   },
   {
-    path: "/images/app/steinnlabs/dope/4.png",
+    path: D4,
     title: "Policy list & Create Page",
   },
   {
-    path: "/images/app/steinnlabs/dope/5.png",
+    path: D5,
     title: "Policy Assignment Page",
   },
   {
-    path: "/images/app/steinnlabs/dope/6.png",
+    path: D6,
     title: "Add Bypass Url Page",
   },
   {
-    path: "/images/app/steinnlabs/dope/7.png",
+    path: D7,
     title: "Imported Users/Groups Page",
   },
   {
-    path: "/images/app/steinnlabs/dope/8.png",
+    path: D8,
     title: "Custom Block Page Template",
   },
   {
-    path: "/images/app/steinnlabs/dope/9.png",
+    path: D9,
     title: "Default Block Page List",
   },
   {
-    path: "/images/app/steinnlabs/dope/11.png",
+    path: D10,
     title: "Overview Page",
   },
   {
-    path: "/images/app/steinnlabs/dope/12.png",
+    path: D11,
     title: "Shadow IT",
   },
   {
-    path: "/images/app/steinnlabs/dope/13.png",
+    path: D12,
     title: "Productivity Page",
   },
   {
-    path: "/images/app/steinnlabs/dope/14.png",
+    path: D13,
     title: "Policy Page",
   },
 ];
 
 const dopeDetailsApp = [
   {
-    path: "/images/app/steinnlabs/dope/15.png",
+    path: DD15,
     title: "Login Page",
   },
   {
-    path: "/images/app/steinnlabs/dope/16.png",
+    path: DD16,
     title: "Invite Admin Page",
   },
   {
-    path: "/images/app/steinnlabs/dope/17.png",
+    path: DD17,
     title: "Policy Details & Update Page",
   },
   {
-    path: "/images/app/steinnlabs/dope/18.png",
+    path: DD18,
     title: "Policy list & Create Page",
   },
   {
-    path: "/images/app/steinnlabs/dope/19.png",
+    path: DD19,
     title: "Policy Assignment Page",
   },
   {
-    path: "/images/app/steinnlabs/dope/20.png",
+    path: DD20,
     title: "Add Bypass Url Page",
   },
   {
-    path: "/images/app/steinnlabs/dope/21.png",
+    path: DD21,
     title: "Imported Users/Groups Page",
   },
   {
-    path: "/images/app/steinnlabs/dope/22.png",
+    path: DD22,
     title: "Custom Block Page Template",
   },
 
   {
-    path: "/images/app/steinnlabs/dope/23.png",
+    path: DD23,
     title: "Overview Page",
   },
   {
-    path: "/images/app/steinnlabs/dope/24.png",
+    path: DD24,
     title: "Shadow IT",
   },
   {
-    path: "/images/app/steinnlabs/dope/25.png",
+    path: DD25,
     title: "Productivity Page",
   },
 ];
@@ -198,11 +225,12 @@ export default function Steinnlabs() {
     <DefaultLayout>
       <div className="container mx-auto p-10">
         <Image
-          src="/images/steinnlabs.jpeg"
+          src={Logo}
           width={100}
           height={100}
           alt="steinnlabs logo"
           priority
+          placeholder="blur"
         />
         <a
           href="https://www.steinnlabs.com/"
@@ -330,6 +358,7 @@ export default function Steinnlabs() {
                       layout="fill"
                       alt={s.title}
                       quality={1}
+                      placeholder="blur"
                     />
                   </div>
                   <p className="text-center my-3">{s.title}</p>
@@ -348,6 +377,7 @@ export default function Steinnlabs() {
                       layout="fill"
                       alt={s.title}
                       quality={1}
+                      placeholder="blur"
                     />
                   </div>
                   {/* <p className="text-center my-3">{s.title}</p> */}
