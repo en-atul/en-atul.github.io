@@ -195,6 +195,7 @@ export default function MKILegal() {
                       layout="fill"
                       alt={s.title}
                       quality={1}
+                      placeholder="blur"
                     />
                   </div>
                   <p className="text-center my-3">{s.title}</p>
@@ -257,6 +258,7 @@ export default function MKILegal() {
                       layout="fill"
                       alt={s.title}
                       quality={1}
+                      placeholder="blur"
                     />
                   </div>
                   {/* <p className="text-center my-3">{s.title}</p> */}

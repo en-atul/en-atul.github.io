@@ -172,7 +172,7 @@ export default function Wellnite() {
               className="item w-[30%] h-72 relative flex flex-col mb-7"
             >
               <div className="relative w-full h-full">
-                <Image src={s.path} layout="fill" alt={s.title} priority />
+                <Image src={s.path} layout="fill" alt={s.title} priority placeholder="blur" />
               </div>
               <p className="text-center my-3">{s.title}</p>
             </article>
