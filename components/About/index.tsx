@@ -9,12 +9,12 @@ const companiesDetails = [
     duartion: "2020",
   },
   {
-    name: "Higher Secondary School",
+    name: "Senior Secondary School",
     role: "Millia Convent School",
     duartion: "2015",
   },
   {
-    name: "High School",
+    name: "Secondary School",
     role: "St. Joseph's School",
     duartion: "2013",
   },
