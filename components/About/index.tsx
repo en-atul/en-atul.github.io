@@ -5,7 +5,7 @@ import { dateDiff } from "../../utils";
 const companiesDetails = [
   {
     name: "Bachelor In Computer Science",
-    role: "Bengal College of Engineering & Technology",
+    role: "Maulana Abul Kalam Azad University of Technology",
     duartion: "2020",
   },
   {
