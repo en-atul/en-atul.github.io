@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { dateDiff } from "../../utils";
+import Building from "../../public/images/building.png";
 
 const companiesDetails = [
   {
@@ -32,11 +32,12 @@ export function About() {
               className="col-span-1 flex flex-col justify-center items-center p-10 bg-white shadow-sm"
             >
               <Image
-                src="/images/building.png"
+                src={Building}
                 width={50}
                 height={50}
                 alt={company.name}
                 priority
+                placeholder="blur"
               />
 
               <p className="text-xl mt-5">{company.name}</p>

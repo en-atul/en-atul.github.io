@@ -2,6 +2,8 @@ import Image from "next/image";
 import React from "react";
 import { DefaultLayout } from "../../components";
 
+import Logo from "../../public/images/distronix.jpeg";
+
 const skills = [
   {
     label: "Reactjs",
@@ -30,11 +32,12 @@ export default function Distronix() {
     <DefaultLayout>
       <div className="container mx-auto p-10">
         <Image
-          src="/images/distronix.jpeg"
+          src={Logo}
           width={100}
           height={100}
           alt="distronix logo"
           priority
+          placeholder="blur"
         />
         <a
           href="http://distronix.in/"

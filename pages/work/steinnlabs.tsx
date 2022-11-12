@@ -29,6 +29,15 @@ import DD23 from "../../public/images/app/steinnlabs/dope/23.png";
 import DD24 from "../../public/images/app/steinnlabs/dope/24.png";
 import DD25 from "../../public/images/app/steinnlabs/dope/25.png";
 
+import S1 from "../../public/images/app/steinnlabs/supermanage/1.webp";
+import S2 from "../../public/images/app/steinnlabs/supermanage/2.webp";
+import S3 from "../../public/images/app/steinnlabs/supermanage/3.webp";
+import S4 from "../../public/images/app/steinnlabs/supermanage/4.webp";
+import S5 from "../../public/images/app/steinnlabs/supermanage/5.webp";
+import S6 from "../../public/images/app/steinnlabs/supermanage/6.webp";
+import S7 from "../../public/images/app/steinnlabs/supermanage/7.webp";
+import S8 from "../../public/images/app/steinnlabs/supermanage/8.webp";
+
 const skills = [
   {
     label: "Reactjs",
@@ -86,35 +95,35 @@ const skills = [
 
 const supermanageApp = [
   {
-    path: "/images/app/steinnlabs/supermanage/1.webp",
+    path: S1,
     title: "Dashboard",
   },
   {
-    path: "/images/app/steinnlabs/supermanage/2.webp",
+    path: S2,
     title: "Appointment Duration",
   },
   {
-    path: "/images/app/steinnlabs/supermanage/3.webp",
+    path: S3,
     title: "Select Provider for Appointment",
   },
   {
-    path: "/images/app/steinnlabs/supermanage/4.webp",
+    path: S4,
     title: "Select Appointment Date",
   },
   {
-    path: "/images/app/steinnlabs/supermanage/5.webp",
+    path: S5,
     title: "Appointment Booked",
   },
   {
-    path: "/images/app/steinnlabs/supermanage/6.webp",
+    path: S6,
     title: "Upcoming Appointment",
   },
   {
-    path: "/images/app/steinnlabs/supermanage/7.webp",
+    path: S7,
     title: "Appointment Call With Provider",
   },
   {
-    path: "/images/app/steinnlabs/supermanage/8.webp",
+    path: S8,
     title: "Plans",
   },
 ];

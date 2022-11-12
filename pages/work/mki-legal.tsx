@@ -2,6 +2,15 @@ import Image from "next/image";
 import React from "react";
 import { DefaultLayout } from "../../components";
 
+import Logo from "../../public/images/mki-legal.jpeg";
+
+import E1 from "../../public/images/app/mkilegal/estate/1.png";
+import E2 from "../../public/images/app/mkilegal/estate/2.png";
+import E3 from "../../public/images/app/mkilegal/estate/3.png";
+
+import F1 from "../../public/images/app/mkilegal/familylaw/1.png";
+import F2 from "../../public/images/app/mkilegal/familylaw/2.png";
+
 const skills = [
   {
     label: "Reactjs",
@@ -43,26 +52,26 @@ const skills = [
 
 const estateApp = [
   {
-    path: "/images/app/mkilegal/estate/1.png",
+    path: E1,
     title: "Login Page",
   },
   {
-    path: "/images/app/mkilegal/estate/2.png",
+    path: E2,
     title: "Invite Admin Page",
   },
   {
-    path: "/images/app/mkilegal/estate/3.png",
+    path: E3,
     title: "Policy Details & Update Page",
   },
 ];
 
 const familylawApp = [
   {
-    path: "/images/app/mkilegal/familylaw/1.png",
+    path: F1,
     title: "Login Page",
   },
   {
-    path: "/images/app/mkilegal/familylaw/2.png",
+    path: F2,
     title: "Invite Admin Page",
   },
 ];
@@ -72,11 +81,12 @@ export default function MKILegal() {
     <DefaultLayout>
       <div className="container mx-auto p-10">
         <Image
-          src="/images/mki-legal.jpeg"
+          src={Logo}
           width={100}
           height={100}
           alt="mki legal logo"
           priority
+          placeholder="blur"
         />
         <a
           href="https://www.perthemploymentlawyers.com.au/"

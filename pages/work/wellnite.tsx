@@ -1,6 +1,16 @@
 import Image from "next/image";
 import React from "react";
 import { DefaultLayout } from "../../components";
+import Logo from "../../public/images/wellnite.jpeg";
+
+import W1 from "../../public/images/app/wellnite/1.webp";
+import W2 from "../../public/images/app/wellnite/2.webp";
+import W3 from "../../public/images/app/wellnite/3.webp";
+import W4 from "../../public/images/app/wellnite/4.webp";
+import W5 from "../../public/images/app/wellnite/5.webp";
+import W6 from "../../public/images/app/wellnite/6.webp";
+import W7 from "../../public/images/app/wellnite/7.webp";
+import W8 from "../../public/images/app/wellnite/8.webp";
 
 const skills = [
   {
@@ -58,35 +68,35 @@ const skills = [
 
 const app = [
   {
-    path: "/images/app/wellnite/1.webp",
+    path: W1,
     title: "Dashboard",
   },
   {
-    path: "/images/app/wellnite/2.webp",
+    path: W2,
     title: "Appointment Duration",
   },
   {
-    path: "/images/app/wellnite/3.webp",
+    path: W3,
     title: "Select Provider for Appointment",
   },
   {
-    path: "/images/app/wellnite/4.webp",
+    path: W4,
     title: "Select Appointment Date",
   },
   {
-    path: "/images/app/wellnite/5.webp",
+    path: W5,
     title: "Appointment Booked",
   },
   {
-    path: "/images/app/wellnite/6.webp",
+    path: W6,
     title: "Upcoming Appointment",
   },
   {
-    path: "/images/app/wellnite/7.webp",
+    path: W7,
     title: "Appointment Call With Provider",
   },
   {
-    path: "/images/app/wellnite/8.webp",
+    path: W8,
     title: "Plans",
   },
 ];
@@ -96,11 +106,12 @@ export default function Wellnite() {
     <DefaultLayout>
       <div className="container mx-auto p-10">
         <Image
-          src="/images/wellnite.jpeg"
+          src={Logo}
           width={100}
           height={100}
           alt="wellnite logo"
           priority
+          placeholder="blur"
         />
         <a
           href="https://wellnite.com"
@@ -161,12 +172,7 @@ export default function Wellnite() {
               className="item w-[30%] h-72 relative flex flex-col mb-7"
             >
               <div className="relative w-full h-full">
-                <Image
-                  src={s.path}
-                  layout="fill"
-                  alt={s.title}
-                  priority
-                />
+                <Image src={s.path} layout="fill" alt={s.title} priority />
               </div>
               <p className="text-center my-3">{s.title}</p>
             </article>
