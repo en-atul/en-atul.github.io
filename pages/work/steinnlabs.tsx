@@ -293,6 +293,14 @@ export default function Steinnlabs() {
           My Responsibilities
         </h3>
         <ul className="list-disc pl-4">
+          <li>
+            Mentor team members for technical guidance, overcome challenges,
+            assist in problem-solving.
+          </li>
+          <li>
+            Actively listened to customers' requests, confirming full
+            understanding before addressing concerns.
+          </li>
           <li>Write Reusable UI Components for web and mobile application</li>
           <li>
             Write Unit & Integration test for best performance, environment,
