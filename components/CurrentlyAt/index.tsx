@@ -13,9 +13,9 @@ export function CurrentlyAt() {
       <p className="max-w-3xl mx-auto mt-5 text-center">
         Software Engineer at Wellnite and have a strong focus on both web and
         mobile applications using Javascript with 3 years experience. Graduated
-        from a Bachelor's course in Computer Science, which has equipped me with
-        the necessary skills for a successful career in the IT field. I am a
-        fast learner and can easily adapt to different work environments. I am
+        from a Bachelor&apos;s course in Computer Science, which has equipped me
+        with the necessary skills for a successful career in the IT field. I am
+        a fast learner and can easily adapt to different work environments. I am
         always seeking to be part of a company that values quality, performance,
         and ethics. I believe this will enable me to explore new opportunities
         and build long-lasting experience.

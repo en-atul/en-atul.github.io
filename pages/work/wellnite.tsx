@@ -189,15 +189,15 @@ export default function Wellnite() {
         <article className="grid grid-cols-1 md:grid-cols-2 gap-10 my-16">
           <section>
             <p className="font-semibold text-xl underline">
-              Submit Provider's Billing Timesheet Bi-Monthly
+              Submit Provider&apos;s Billing Timesheet Bi-Monthly
             </p>
             <p>
-              To accurately calculate a provider's billable hours, we rely on
-              multiple data sources. First, we gather all the appointments for
-              the given month from Acuity, a powerful scheduling tool designed
-              for businesses. Acuity enables us to extract valuable information
-              such as appointment details, including duration and unique
-              identifiers.
+              To accurately calculate a provider&apos;s billable hours, we rely
+              on multiple data sources. First, we gather all the appointments
+              for the given month from Acuity, a powerful scheduling tool
+              designed for businesses. Acuity enables us to extract valuable
+              information such as appointment details, including duration and
+              unique identifiers.
               <br />
               In addition to retrieving appointment data, we also verify the
               active status of the providers and cross-reference it with the
@@ -224,18 +224,19 @@ export default function Wellnite() {
           </section>
           <section>
             <p className="font-semibold text-xl underline">
-              Show Provider's Billing history / Current Month Billable hours
+              Show Provider&apos;s Billing history / Current Month Billable
+              hours
             </p>
             <p>
               To ensure a smooth and transparent billing process for our
               providers, we have implemented a system where we gather and store
-              their billing details in our company's database at the time of
-              submission. These details are then sent to "LetsDeel," a platform
-              we utilize for billing purposes. By retaining this information in
-              our database, we can leverage it to offer providers access to
-              their billing history, enabling them to track their appointment
-              details without the need to contact company's staff or billing
-              team.
+              their billing details in our company&apos;s database at the time
+              of submission. These details are then sent to "LetsDeel," a
+              platform we utilize for billing purposes. By retaining this
+              information in our database, we can leverage it to offer providers
+              access to their billing history, enabling them to track their
+              appointment details without the need to contact company&apos;s
+              staff or billing team.
               <br /> <br />
               The availability of billing history empowers providers to stay
               informed about their financial transactions and verify the
@@ -291,7 +292,7 @@ export default function Wellnite() {
 
           <section>
             <p className="font-semibold text-xl underline">
-              Provider's Referral Program
+              Provider&apos;s Referral Program
             </p>
             <p>
               Goal of this feature is to motivate providers, promote
@@ -360,18 +361,19 @@ export default function Wellnite() {
               serves as a trigger to prompt the browser to re-fetch the latest
               version of the application and discard any outdated cached data.
               By leveraging XMLHttpRequests (XMLHttps) requests, we compare the
-              old application version stored in the browser's cache with the
-              newly released version. If the two versions differ, it indicates
-              that an update has occurred.
+              old application version stored in the browser&apos;s cache with
+              the newly released version. If the two versions differ, it
+              indicates that an update has occurred.
               <br />
               Upon detecting a version mismatch, we initiate the clearing of the
-              browser's cache. This process ensures that users receive the most
-              up-to-date version of our application, eliminating any potential
-              compatibility issues or discrepancies caused by outdated cached
-              data. By proactively managing the cache through this mechanism, we
-              strive to provide users with a seamless and optimized browsing
-              experience, enhancing their satisfaction and minimizing any
-              disruptions or inconsistencies that may arise from cached content.
+              browser&apos;s cache. This process ensures that users receive the
+              most up-to-date version of our application, eliminating any
+              potential compatibility issues or discrepancies caused by outdated
+              cached data. By proactively managing the cache through this
+              mechanism, we strive to provide users with a seamless and
+              optimized browsing experience, enhancing their satisfaction and
+              minimizing any disruptions or inconsistencies that may arise from
+              cached content.
             </p>
           </section>
 
@@ -401,12 +403,13 @@ export default function Wellnite() {
               visual details of the image.
               <br />
               By optimizing the image quality and size before uploading, we
-              alleviate the burden on both the user's device and the server.
-              Users no longer have to wait for extended periods to upload large
-              files, and the server can process the optimized images more
-              quickly and efficiently. This optimization approach enhances the
-              overall usability of the application, providing users with a
-              seamless experience when uploading their high-resolution photos.
+              alleviate the burden on both the user&apos;s device and the
+              server. Users no longer have to wait for extended periods to
+              upload large files, and the server can process the optimized
+              images more quickly and efficiently. This optimization approach
+              enhances the overall usability of the application, providing users
+              with a seamless experience when uploading their high-resolution
+              photos.
               <br />
               In summary, by optimizing image quality and size before uploading,
               we proactively tackle the issue of delays during high-resolution
@@ -464,22 +467,22 @@ export default function Wellnite() {
               recommended to utilize the secure environment variables technique
               using a .env.vault file. This vault works seamlessly with backend
               but our goal was to make it for frontend as well. To achieve this
-              I'd created a package which helps to decrypt the vault keys into
-              the .env file on build time, so that it can be use easily on run
-              time.
+              I&apos;d created a package which helps to decrypt the vault keys
+              into the .env file on build time, so that it can be use easily on
+              run time.
               <br />
               The .env.vault file serves as an encrypted container for your
-              secrets, decrypting them on-demand during the application's boot
-              process. This process relies on a DOTENV_KEY environment variable
-              that you set on your cloud platform or server. By following this
-              approach, even if there is a breach in security and an attacker
-              gains access to your decryption key, they will only obtain the key
-              itself, not the actual secrets. For the attacker to access your
-              secrets, they would need to compromise additional security
-              measures, such as gaining access to your codebase, locating the
-              .env.vault file, and decrypting its contents. This adds
-              significant complexity and time-consuming efforts for potential
-              attackers.
+              secrets, decrypting them on-demand during the application&apos;s
+              boot process. This process relies on a DOTENV_KEY environment
+              variable that you set on your cloud platform or server. By
+              following this approach, even if there is a breach in security and
+              an attacker gains access to your decryption key, they will only
+              obtain the key itself, not the actual secrets. For the attacker to
+              access your secrets, they would need to compromise additional
+              security measures, such as gaining access to your codebase,
+              locating the .env.vault file, and decrypting its contents. This
+              adds significant complexity and time-consuming efforts for
+              potential attackers.
               <br />
               The implementation of this technique involves three
               straightforward steps:
@@ -515,7 +518,7 @@ export default function Wellnite() {
               <br />
               In summary, the use of a .env.vault file with encrypted secrets
               provides an added layer of security. By encrypting the secrets and
-              decrypting them just-in-time during the application's boot
+              decrypting them just-in-time during the application&apos;s boot
               process, the technique minimizes the impact of a potential breach,
               as attackers would need to overcome multiple barriers to access
               the actual secrets. Creating environment-specific .env files and
@@ -530,15 +533,15 @@ export default function Wellnite() {
             </p>
             <p>
               To enable the "Send Audio Message" feature, we implemented a
-              process that involves requesting permission from the user's
+              process that involves requesting permission from the user&apos;s
               browser using the "navigator.mediaDevices.getUserMedia" API. This
-              permission allows us to access the user's microphone and record
-              audio, providing them with the ability to perform various actions
-              such as play, pause, stop, cancel, and resume recording.
+              permission allows us to access the user&apos;s microphone and
+              record audio, providing them with the ability to perform various
+              actions such as play, pause, stop, cancel, and resume recording.
               Additionally, users can preview their recorded audio using the
               "createObjectURL" function.
               <br /> <br />
-              By requesting permission to access the user's microphone, we
+              By requesting permission to access the user&apos;s microphone, we
               ensure that they have control and consent over the recording
               process. This permission is necessary to capture audio input and
               facilitate the recording functionality within our application.

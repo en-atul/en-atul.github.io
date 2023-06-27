@@ -150,7 +150,7 @@ export default function MKILegal() {
             <p className="font-semibold text-xl underline">ChatGPT</p>
             <p>
               To optimize the subscription cost associated with ChatGPT, we
-              implemented a solution on our company's website that utilizes
+              implemented a solution on our company&apos;s website that utilizes
               ChatGPT API's stream functionality. This implementation allows all
               users to access and utilize ChatGPT seamlessly while minimizing
               the overall subscription expenses.
@@ -171,12 +171,12 @@ export default function MKILegal() {
               that multiple users can engage in conversations without the need
               for individual API calls for each message exchange.
               <br />
-              By implementing this solution on our company's website, we ensure
-              that all users can seamlessly access and utilize ChatGPT for their
-              needs without incurring additional expenses. This optimization
-              allows us to make efficient use of the ChatGPT subscription,
-              minimizing costs while maintaining a high level of user
-              satisfaction.
+              By implementing this solution on our company&apos;s website, we
+              ensure that all users can seamlessly access and utilize ChatGPT
+              for their needs without incurring additional expenses. This
+              optimization allows us to make efficient use of the ChatGPT
+              subscription, minimizing costs while maintaining a high level of
+              user satisfaction.
             </p>
           </section>
 
@@ -187,9 +187,9 @@ export default function MKILegal() {
             <p>
               To enable the "Record & Transcribe Audio" feature, we have
               implemented a comprehensive process that begins with requesting
-              permission from the user's browser using the
+              permission from the user&apos;s browser using the
               "navigator.mediaDevices.getUserMedia" API. This permission grants
-              us access to the user's microphone, enabling the recording of
+              us access to the user&apos;s microphone, enabling the recording of
               audio. Users can then perform a range of actions, including play,
               pause, stop, cancel, and resume recording, providing them with
               complete control over the audio capture process. Moreover, they
@@ -197,7 +197,7 @@ export default function MKILegal() {
               "createObjectURL" function, which generates a URL allowing them to
               listen to the audio within our application.
               <br /> <br />
-              By requesting permission to access the user's microphone, we
+              By requesting permission to access the user&apos;s microphone, we
               prioritize user control and consent, ensuring they have full
               oversight of the recording process. This permission is crucial for
               capturing high-quality audio input and facilitating the recording
@@ -237,22 +237,22 @@ export default function MKILegal() {
               recommended to utilize the secure environment variables technique
               using a .env.vault file. This vault works seamlessly with backend
               but our goal was to make it for frontend as well. To achieve this
-              I'd created a package which helps to decrypt the vault keys into
-              the .env file on build time, so that it can be use easily on run
-              time.
+              I&apos;d created a package which helps to decrypt the vault keys
+              into the .env file on build time, so that it can be use easily on
+              run time.
               <br />
               The .env.vault file serves as an encrypted container for your
-              secrets, decrypting them on-demand during the application's boot
-              process. This process relies on a DOTENV_KEY environment variable
-              that you set on your cloud platform or server. By following this
-              approach, even if there is a breach in security and an attacker
-              gains access to your decryption key, they will only obtain the key
-              itself, not the actual secrets. For the attacker to access your
-              secrets, they would need to compromise additional security
-              measures, such as gaining access to your codebase, locating the
-              .env.vault file, and decrypting its contents. This adds
-              significant complexity and time-consuming efforts for potential
-              attackers.
+              secrets, decrypting them on-demand during the application&apos;s
+              boot process. This process relies on a DOTENV_KEY environment
+              variable that you set on your cloud platform or server. By
+              following this approach, even if there is a breach in security and
+              an attacker gains access to your decryption key, they will only
+              obtain the key itself, not the actual secrets. For the attacker to
+              access your secrets, they would need to compromise additional
+              security measures, such as gaining access to your codebase,
+              locating the .env.vault file, and decrypting its contents. This
+              adds significant complexity and time-consuming efforts for
+              potential attackers.
               <br />
               The implementation of this technique involves three
               straightforward steps:
@@ -288,7 +288,7 @@ export default function MKILegal() {
               <br />
               In summary, the use of a .env.vault file with encrypted secrets
               provides an added layer of security. By encrypting the secrets and
-              decrypting them just-in-time during the application's boot
+              decrypting them just-in-time during the application&apos;s boot
               process, the technique minimizes the impact of a potential breach,
               as attackers would need to overcome multiple barriers to access
               the actual secrets. Creating environment-specific .env files and

@@ -298,7 +298,7 @@ export default function Steinnlabs() {
             assist in problem-solving.
           </li>
           <li>
-            Actively listened to customers' requests, confirming full
+            Actively listened to customers requests, confirming full
             understanding before addressing concerns.
           </li>
           <li>Write Reusable UI Components for web and mobile application</li>
