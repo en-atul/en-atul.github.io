@@ -11,14 +11,21 @@ export function CurrentlyAt() {
         <span className="bg-blue-600 text-white px-5 py-1">Wellnite</span>
       </p>
       <p className="max-w-3xl mx-auto mt-5 text-center">
-        Software Engineer, currently working with Wellnite Health Inc. in the
-        area of web development & Mobile application development using react.
-        Graduated from Bengal college of engineering and technology Integrated
-        Bachelors course of Computer science which has prepared me for a career
-        in the field of IT. I&apos;m a fast learner and can easily adapt to any
-        work environment and always want to be a part of a company that values
-        quality, performance and ethics. I believe this would help me explore
-        new avenues and allow myself to build an experience for a long time.
+        Software Engineer at Wellnite and have a strong focus on both web and
+        mobile applications using Javascript with 3 years experience. Graduated
+        from a Bachelor's course in Computer Science, which has equipped me with
+        the necessary skills for a successful career in the IT field. I am a
+        fast learner and can easily adapt to different work environments. I am
+        always seeking to be part of a company that values quality, performance,
+        and ethics. I believe this will enable me to explore new opportunities
+        and build long-lasting experience.
+        <br />
+        <br />
+        Extensive experience includes working with a wide range of technologies,
+        including Javascript, Typescript, Reactjs, React Native, Redux toolkit,
+        Rxjs, Nodejs, MongoDB, Jest, Nextjs, NestJS, GraphQL, and Firebase. This
+        expertise has enabled me to create high-quality, scalable, and reliable
+        applications that meet the unique requirements of our clients.
       </p>
     </section>
   );
