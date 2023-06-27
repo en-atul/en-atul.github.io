@@ -20,7 +20,7 @@ export function Footer() {
           </a>
         </li>
         <li className="mx-3 border-b border-gray-700">
-          <a href="mailto: atkr3001@gmail.com" rel="noopener noreferrer">
+          <a href="mailto: atkr5496@gmail.com" rel="noopener noreferrer">
             Email
           </a>
         </li>
