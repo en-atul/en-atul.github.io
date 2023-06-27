@@ -211,15 +211,16 @@ export default function Wellnite() {
               which assist us in accurately assessing their billable status.
               <br />
               Upon identifying the billable appointments, we proceed to submit
-              the total billable hours to "LetsDeel." This convenient platform
-              enables us to streamline the payment process for the providers,
-              allowing the payer to remit payment with a single click. This
-              eliminates the need for individual payments and simplifies the
-              overall payment experience.
+              the total billable hours to <strong>LetsDeel</strong> This
+              convenient platform enables us to streamline the payment process
+              for the providers, allowing the payer to remit payment with a
+              single click. This eliminates the need for individual payments and
+              simplifies the overall payment experience.
               <br />
               By leveraging Acuity, analyzing relevant data, and utilizing the
-              efficiency of LetsDeel, we ensure accurate billing and facilitate
-              seamless payment transactions for the providers.
+              efficiency of <strong>LetsDeel</strong>, we ensure accurate
+              billing and facilitate seamless payment transactions for the
+              providers.
             </p>
           </section>
           <section>
@@ -231,12 +232,12 @@ export default function Wellnite() {
               To ensure a smooth and transparent billing process for our
               providers, we have implemented a system where we gather and store
               their billing details in our company&apos;s database at the time
-              of submission. These details are then sent to "LetsDeel," a
-              platform we utilize for billing purposes. By retaining this
-              information in our database, we can leverage it to offer providers
-              access to their billing history, enabling them to track their
-              appointment details without the need to contact company&apos;s
-              staff or billing team.
+              of submission. These details are then sent to{" "}
+              <strong>LetsDeel</strong>, a platform we utilize for billing
+              purposes. By retaining this information in our database, we can
+              leverage it to offer providers access to their billing history,
+              enabling them to track their appointment details without the need
+              to contact company&apos;s staff or billing team.
               <br /> <br />
               The availability of billing history empowers providers to stay
               informed about their financial transactions and verify the
@@ -278,10 +279,11 @@ export default function Wellnite() {
               ensuring that no messages go unanswered. This feature addresses a
               longstanding need within the organization.
               <br />
-              As part of the implementation, integration with "CometChat" is
-              being explored to cater to the specific requirements of service
-              providers. This integration will enhance the capabilities and
-              effectiveness of the communication feature.
+              As part of the implementation, integration with{" "}
+              <strong>CometChat</strong> is being explored to cater to the
+              specific requirements of service providers. This integration will
+              enhance the capabilities and effectiveness of the communication
+              feature.
               <br />
               By implementing this comprehensive communication system, Wellnite
               aims to optimize interactions, improve provider-member engagement,
@@ -304,7 +306,7 @@ export default function Wellnite() {
               Through the Wellnite Partners and Mission Incentive Program,
               providers can earn rewards and compensation while contributing to
               the mission of making mental healthcare accessible. Providers will
-              earn "Wellbits" for their progress achieved through the Wellnite
+              earn Wellbits for their progress achieved through the Wellnite
               platform. These Wellbits can be exchanged for cash or various
               perks.
               <br />
@@ -532,14 +534,14 @@ export default function Wellnite() {
               Record Audio Message
             </p>
             <p>
-              To enable the "Send Audio Message" feature, we implemented a
-              process that involves requesting permission from the user&apos;s
-              browser using the "navigator.mediaDevices.getUserMedia" API. This
+              To enable the Send Audio Message feature, we implemented a process
+              that involves requesting permission from the user&apos;s browser
+              using the "navigator.mediaDevices.getUserMedia" API. This
               permission allows us to access the user&apos;s microphone and
               record audio, providing them with the ability to perform various
               actions such as play, pause, stop, cancel, and resume recording.
               Additionally, users can preview their recorded audio using the
-              "createObjectURL" function.
+              createObjectURL function.
               <br /> <br />
               By requesting permission to access the user&apos;s microphone, we
               ensure that they have control and consent over the recording
@@ -551,7 +553,7 @@ export default function Wellnite() {
               The implementation allows users to perform actions like play,
               pause, stop, cancel, and resume recording, providing them with
               flexibility and control over the audio recording process. They can
-              preview their recorded audio using the "createObjectURL" function,
+              preview their recorded audio using the createObjectURL function,
               which generates a URL that can be used to play the audio back
               within the application.
               <br /> <br />

@@ -151,9 +151,9 @@ export default function MKILegal() {
             <p>
               To optimize the subscription cost associated with ChatGPT, we
               implemented a solution on our company&apos;s website that utilizes
-              ChatGPT API's stream functionality. This implementation allows all
-              users to access and utilize ChatGPT seamlessly while minimizing
-              the overall subscription expenses.
+              ChatGPT API&apos;s stream functionality. This implementation
+              allows all users to access and utilize ChatGPT seamlessly while
+              minimizing the overall subscription expenses.
               <br />
               By leveraging the stream functionality provided by the ChatGPT
               API, we ensure that multiple users can interact with the model
@@ -185,17 +185,17 @@ export default function MKILegal() {
               Record Audio and Transcribe
             </p>
             <p>
-              To enable the "Record & Transcribe Audio" feature, we have
+              To enable the Record & Transcribe Audio feature, we have
               implemented a comprehensive process that begins with requesting
               permission from the user&apos;s browser using the
-              "navigator.mediaDevices.getUserMedia" API. This permission grants
-              us access to the user&apos;s microphone, enabling the recording of
-              audio. Users can then perform a range of actions, including play,
-              pause, stop, cancel, and resume recording, providing them with
-              complete control over the audio capture process. Moreover, they
-              have the option to preview their recorded audio using the
-              "createObjectURL" function, which generates a URL allowing them to
-              listen to the audio within our application.
+              <strong>navigator.mediaDevices.getUserMedia</strong> API. This
+              permission grants us access to the user&apos;s microphone,
+              enabling the recording of audio. Users can then perform a range of
+              actions, including play, pause, stop, cancel, and resume
+              recording, providing them with complete control over the audio
+              capture process. Moreover, they have the option to preview their
+              recorded audio using the createObjectURL function, which generates
+              a URL allowing them to listen to the audio within our application.
               <br /> <br />
               By requesting permission to access the user&apos;s microphone, we
               prioritize user control and consent, ensuring they have full
@@ -210,7 +210,7 @@ export default function MKILegal() {
               such as playing, pausing, stopping, canceling, and resuming their
               audio recordings. This flexibility and control enhance the overall
               audio recording experience, catering to individual preferences and
-              needs. Additionally, users can utilize the "createObjectURL"
+              needs. Additionally, users can utilize the createObjectURL
               function to preview their recorded audio, providing them with a
               valuable tool to assess the quality and content of their
               recordings within the application.
