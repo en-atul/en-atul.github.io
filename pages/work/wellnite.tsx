@@ -536,12 +536,12 @@ export default function Wellnite() {
             <p>
               To enable the Send Audio Message feature, we implemented a process
               that involves requesting permission from the user&apos;s browser
-              using the "navigator.mediaDevices.getUserMedia" API. This
-              permission allows us to access the user&apos;s microphone and
-              record audio, providing them with the ability to perform various
-              actions such as play, pause, stop, cancel, and resume recording.
-              Additionally, users can preview their recorded audio using the
-              createObjectURL function.
+              using the <strong>navigator.mediaDevices.getUserMedia</strong>{" "}
+              API. This permission allows us to access the user&apos;s
+              microphone and record audio, providing them with the ability to
+              perform various actions such as play, pause, stop, cancel, and
+              resume recording. Additionally, users can preview their recorded
+              audio using the createObjectURL function.
               <br /> <br />
               By requesting permission to access the user&apos;s microphone, we
               ensure that they have control and consent over the recording
