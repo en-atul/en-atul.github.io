@@ -8,7 +8,9 @@ export function CurrentlyAt() {
       </h1>
       <p className="text-black text-sm md:text-xl text-center mt-12">
         Currently → <span>Engineer</span> @&nbsp;
-        <span className="bg-blue-600 text-white px-5 py-1">Wellnite</span>
+        <span className="bg-gradient-to-r from-[#fc85c2] to-blue-500 text-white px-5 py-1">
+          Wellnite
+        </span>
       </p>
       <p className="max-w-3xl mx-auto mt-5 text-center">
         Software Engineer at Wellnite and have a strong focus on both web and

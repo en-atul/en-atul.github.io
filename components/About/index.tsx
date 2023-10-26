@@ -2,47 +2,47 @@ import Image from "next/image";
 import React from "react";
 import Building from "../../public/images/building.png";
 
-const companiesDetails = [
+const education = [
   {
-    name: "Bachelor In Computer Science",
-    role: "Maulana Abul Kalam Azad University of Technology",
-    duartion: "2020",
+    degree: "Bachelor In Computer Science",
+    from: "Maulana Abul Kalam Azad University of Technology",
+    year: "2020",
   },
   {
-    name: "Senior Secondary School",
-    role: "Millia Convent School",
-    duartion: "2015",
+    degree: "Senior Secondary School",
+    from: "Millia Convent School",
+    year: "2015",
   },
   {
-    name: "Secondary School",
-    role: "St. Joseph's School",
-    duartion: "2013",
+    degree: "Secondary School",
+    from: "St. Joseph's School",
+    year: "2013",
   },
 ];
 
 export function About() {
   return (
     <section id="about" className="container mx-auto my-16">
-      <h1 className="text-center">About/Education</h1>
+      <h2 className="text-center">About/Education</h2>
       <section className="container mx-auto grid grid-cols-3 gap-8 my-8">
-        {companiesDetails.map((company, idx) => {
+        {education.map((company, idx) => {
           return (
             <article
               key={idx}
-              className="col-span-1 flex flex-col justify-center items-center p-10 bg-white shadow-sm"
+              className="col-span-1 flex flex-col justify-center items-center p-10 bg-white border rounded-md"
             >
               <Image
                 src={Building}
                 width={50}
                 height={50}
-                alt={company.name}
+                alt={company.degree}
                 priority
                 placeholder="blur"
               />
 
-              <p className="text-xl mt-5">{company.name}</p>
-              <p>{company.role}</p>
-              <p>Completed In {company.duartion}</p>
+              <h5 className="text-xl text-center mt-5">{company.degree}</h5>
+              <p className="text-center">{company.from}</p>
+              <p className="text-center">Completed In {company.year}</p>
             </article>
           );
         })}

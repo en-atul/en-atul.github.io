@@ -39,7 +39,7 @@ export function Development() {
         return (
           <article
             key={idx}
-            className="w-[30%] flex flex-col justify-center items-center p-10 bg-white shadow-sm"
+            className="w-[30%] flex flex-col justify-center items-center p-10 bg-white border rounded-md"
           >
             <Image
               src={company.img}
@@ -49,7 +49,7 @@ export function Development() {
               priority
               placeholder="blur"
             />
-            <p className="text-xl mt-5">{company.name}</p>
+            <h5 className="text-xl mt-5">{company.name}</h5>
             <p className="text-center mt-2">{company.role}</p>
           </article>
         );

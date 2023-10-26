@@ -4,21 +4,20 @@ import React from "react";
 
 const projects = [
   {
-    title: "What Are Odds",
-    type: "/images/mobile_app_development.png",
-    description:
-      "It's a game app where opponent has to complete the challenge, if he lost",
-    thumbnail: "",
-    appLink: "",
-    path: "",
-  },
-  {
     title: "Wellnite",
     type: "/images/web_app_development.png",
     description:
       "Wellnite is a mental health app which helps people to overcome anxiety & depression",
     thumbnail: "",
     appLink: "https://www.wellnite.com/",
+    path: "",
+  },
+  {
+    title: "DOPE.SECURITY",
+    type: "/images/web_app_development.png",
+    description: `Dope Security is a secure web gateway (SWG) app is designed to filter, or block access to harmful websites and applications per company policy.`,
+    thumbnail: "",
+    appLink: "https://dope.security/",
     path: "",
   },
   {
@@ -29,6 +28,27 @@ const projects = [
     appLink: "https://www.estatesplus.com.au/",
     path: "",
   },
+  {
+    title: "Supermanage",
+    type: "/images/mobile_app_development.png",
+    description: `Supermanage is the all in one best free staff management solution for business.
+    It offers a quick & easy way to record attendance, employee advances, overtime and remarks for your employees.
+    Under the report section of the platform users of the platform can download all the reports related to payroll, advances, overtime and remarks in PDF and excel formats.`,
+    thumbnail: "",
+    appLink:
+      "https://play.google.com/store/apps/details?id=com.business.supermanage.android",
+    path: "",
+  },
+  {
+    title: "What Are Odds",
+    type: "/images/mobile_app_development.png",
+    description:
+      "It's a game app where opponent has to complete the challenge, if he lost",
+    thumbnail: "",
+    appLink: "",
+    path: "",
+  },
+
   {
     title: "Family Law Assist",
     type: "/images/web_app_development.png",
@@ -47,25 +67,7 @@ const projects = [
     appLink: "https://www.resolvy.com.au/",
     path: "",
   },
-  {
-    title: "DOPE SECURITY",
-    type: "/images/web_app_development.png",
-    description: `Dope Security is a secure web gateway (SWG) app is designed to filter, or block access to harmful websites and applications per company policy.`,
-    thumbnail: "",
-    appLink: "https://dope.security/",
-    path: "",
-  },
-  {
-    title: "Supermanage",
-    type: "/images/mobile_app_development.png",
-    description: `Supermanage is the all in one best free staff management solution for business.
-    It offers a quick & easy way to record attendance, employee advances, overtime and remarks for your employees.
-    Under the report section of the platform users of the platform can download all the reports related to payroll, advances, overtime and remarks in PDF and excel formats.`,
-    thumbnail: "",
-    appLink:
-      "https://play.google.com/store/apps/details?id=com.business.supermanage.android",
-    path: "",
-  },
+
   {
     title: "Satoshi Solutions",
     type: "/images/web_app_development.png",
@@ -88,10 +90,10 @@ const projects = [
 export function Projects() {
   return (
     <section id="projects" className="container mx-auto my-16">
-      <h1 className="text-center">Projects</h1>
+      <h2 className="text-center">Projects</h2>
       <section className="my-16 grid grid-cols-3 gap-4">
         {projects.map((p, idx) => (
-          <article key={idx} className="bg-white p-10">
+          <article key={idx} className="bg-white p-10 border rounded-md">
             <div className="flex justify-between ">
               <p className="text-xl">{p.title}</p>
               <Image

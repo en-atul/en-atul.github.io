@@ -7,7 +7,7 @@ export function Footer() {
       <ul className="list-none flex items-center text-black text-lg">
         <li className="mr-3 border-b border-gray-700">
           <a
-            href="https://www.linkedin.com/in/atul-b98221172/"
+            href="https://www.linkedin.com/in/en-atul/"
             target="_blank"
             rel="noopener noreferrer"
           >

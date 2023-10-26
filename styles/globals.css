@@ -2,15 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+@layer components {
   h1 {
-    @apply text-3xl font-semibold;
+    @apply font-semibold text-[30px] md:text-[55px];
   }
   h2 {
-    @apply text-2xl font-bold;
+    @apply font-semibold text-[32px];
   }
   h3 {
-    @apply text-xl font-bold;
+    @apply font-semibold text-[32px];
+  }
+  h4 {
+    @apply font-semibold text-[24px];
+  }
+  h5 {
+    @apply font-semibold text-[16px];
   }
 }
 

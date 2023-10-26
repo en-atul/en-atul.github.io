@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { DefaultLayout } from "../../components";
-import Logo from "../../public/images/wellnite.jpeg";
+import Logo from "../../public/images/wellnite.png";
 
 import W1 from "../../public/images/app/wellnite/1.webp";
 import W2 from "../../public/images/app/wellnite/2.webp";
@@ -107,7 +107,7 @@ export default function Wellnite() {
       <div className="container mx-auto p-10">
         <Image
           src={Logo}
-          width={100}
+          width={120}
           height={100}
           alt="wellnite logo"
           priority

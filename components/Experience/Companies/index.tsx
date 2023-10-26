@@ -2,43 +2,62 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { dateDiff } from "../../../utils";
-
+import steinnlabs from "../../../public/images/steinnlabs.jpeg";
+import wellnite from "../../../public/images/wellnite.png";
+import distronix from "../../../public/images/distronix.jpeg";
+import mki_legal from "../../../public/images/mki-legal.jpeg";
 const companiesDetails = [
   {
     name: "Wellnite",
-    img: "/images/wellnite.jpeg",
+    img: wellnite,
     role: "Software Engineer",
-    duartion: "Oct 2020 - Present ·",
+    duration: "Oct 2020 - Present ·",
     startDate: new Date("10-01-2020"),
     endDate: new Date(),
     path: "/work/wellnite",
+    dimension: {
+      width: 60,
+      height: 50,
+    },
   },
   {
     name: "Steinnlabs",
-    img: "/images/steinnlabs.jpeg",
+    img: steinnlabs,
     role: "FullStack Developer",
-    duartion: "Mar 2021 - Jul 2022 ·",
+    duration: "Mar 2021 - Jul 2022 ·",
     startDate: new Date("03-01-2021"),
     endDate: new Date("07-31-2022"),
     path: "/work/steinnlabs",
+    dimension: {
+      width: 50,
+      height: 50,
+    },
   },
   {
     name: "MKI Legal",
-    img: "/images/mki_legal.jpeg",
+    img: mki_legal,
     role: "Software Developer | Freelance",
-    duartion: "Apr 2021 - Jun 2022 ·",
+    duration: "Apr 2021 - Jun 2022 ·",
     startDate: new Date("04-01-2020"),
     endDate: new Date("06-30-2021"),
     path: "/work/mki-legal",
+    dimension: {
+      width: 70,
+      height: 70,
+    },
   },
   {
     name: "Distronix",
-    img: "/images/distronix.jpeg",
+    img: distronix,
     role: "Frontend Developer",
-    duartion: "Jun 2020 - Sep 2020 ·",
+    duration: "Jun 2020 - Sep 2020 ·",
     startDate: new Date("06-01-2020"),
     endDate: new Date("09-30-2020"),
     path: "/work/distronix",
+    dimension: {
+      width: 100,
+      height: 100,
+    },
   },
 ];
 
@@ -66,24 +85,27 @@ export function Companies() {
         return (
           <article
             key={idx}
-            className="w-[30%] flex flex-col justify-center items-center p-10 bg-white shadow-sm"
+            className="w-[30%] flex flex-col justify-center items-center p-10 bg-white border rounded-md"
           >
-            {/* <Image
+            <Image
               src={company.img}
-              width={30}
-              height={30}
-              alt={company.img}
-              className="grayscale"
-            /> */}
+              width={company.dimension.width}
+              height={company.dimension.height}
+              alt={company.img.src}
+              className={
+                company.duration.includes("Present") ? "" : "grayscale"
+              }
+              style={{ objectFit: "contain" }}
+            />
 
-            <p className="text-xl mt-5">{company.name}</p>
+            <p className="text-xl font-semibold mt-5">{company.name}</p>
             <p>{company.role}</p>
             <p>
-              {company.duartion} {formatDateString(years, months)}
+              {company.duration} {formatDateString(years, months)}
             </p>
 
             <Link href={company.path}>
-              <p className="mt-4 text-blue-500 font-light border-b border-white hover:border-blue-500 cursor-pointer">
+              <p className="mt-4 text-blue-500 font-light border-b border-blue-500 cursor-pointer">
                 More Details
               </p>
             </Link>
