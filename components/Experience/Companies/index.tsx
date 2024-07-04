@@ -6,14 +6,29 @@ import steinnlabs from "../../../public/images/steinnlabs.jpeg";
 import wellnite from "../../../public/images/wellnite.png";
 import distronix from "../../../public/images/distronix.jpeg";
 import mki_legal from "../../../public/images/mki-legal.jpeg";
+import epam from "../../../public/images/epam-a.jpeg";
+
 const companiesDetails = [
+  {
+    name: "Epam",
+    img: epam,
+    role: "Software Engineer",
+    duration: "April 2024 - Present ·",
+    startDate: new Date("04-01-2024"),
+    endDate: new Date(),
+    path: "/work/wellnite",
+    dimension: {
+      width: 80,
+      height: 80,
+    },
+  },
   {
     name: "Wellnite",
     img: wellnite,
     role: "Software Engineer",
-    duration: "Oct 2020 - Present ·",
+    duration: "Oct 2020 - Mar 2024 ·",
     startDate: new Date("10-01-2020"),
-    endDate: new Date(),
+    endDate: new Date("03-30-2024"),
     path: "/work/wellnite",
     dimension: {
       width: 60,

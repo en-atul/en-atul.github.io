@@ -8,16 +8,14 @@ export function CurrentlyAt() {
       </h1>
       <p className="text-black text-sm md:text-xl text-center mt-12">
         Currently → <span>Engineer</span> @&nbsp;
-        <span className="bg-gradient-to-r from-[#fc85c2] to-blue-500 text-white px-5 py-1">
-          Wellnite
-        </span>
+        <span className="bg-[#cbfa12] px-5 py-1">Epam</span>
       </p>
       <p className="max-w-3xl mx-auto mt-5 text-center">
-        Software Engineer at Wellnite and have a strong focus on both web and
-        mobile applications using Javascript with 3+ years experience. Graduated
-        from a Bachelor&apos;s course in Computer Science, which has equipped me
-        with the necessary skills for a successful career in the IT field. I am
-        a fast learner and can easily adapt to different work environments. I am
+        Software Engineer at Epam and have a strong focus on both web and mobile
+        applications using Javascript with 4+ years experience. Graduated from a
+        Bachelor&apos;s course in Computer Science, which has equipped me with
+        the necessary skills for a successful career in the IT field. I am a
+        fast learner and can easily adapt to different work environments. I am
         always seeking to be part of a company that values quality, performance,
         and ethics. I believe this will enable me to explore new opportunities
         and build long-lasting experience.
