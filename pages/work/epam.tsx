@@ -48,6 +48,10 @@ const skills = [
     borderColor: "border-pink-500",
   },
   {
+    label: "GraphQL",
+    borderColor: "border-pink-500",
+  },
+  {
     label: "rxjs",
     borderColor: "border-pink-500",
   },
