@@ -35,19 +35,19 @@ const companiesDetails = [
       height: 50,
     },
   },
-  {
-    name: "Steinnlabs",
-    img: steinnlabs,
-    role: "FullStack Developer",
-    duration: "Mar 2021 - Jul 2022 ·",
-    startDate: new Date("03-01-2021"),
-    endDate: new Date("07-31-2022"),
-    path: "/work/steinnlabs",
-    dimension: {
-      width: 50,
-      height: 50,
-    },
-  },
+  // {
+  //   name: "Steinnlabs",
+  //   img: steinnlabs,
+  //   role: "FullStack Developer",
+  //   duration: "Mar 2021 - Jul 2022 ·",
+  //   startDate: new Date("03-01-2021"),
+  //   endDate: new Date("07-31-2022"),
+  //   path: "/work/steinnlabs",
+  //   dimension: {
+  //     width: 50,
+  //     height: 50,
+  //   },
+  // },
   {
     name: "MKI Legal",
     img: mki_legal,

@@ -49,16 +49,15 @@ const projects = [
       "https://play.google.com/store/apps/details?id=com.business.supermanage.android",
     path: "",
   },
-  {
-    title: "What Are Odds",
-    type: "/images/mobile_app_development.png",
-    description:
-      "It's a game app where opponent has to complete the challenge, if he lost",
-    thumbnail: "",
-    appLink: "",
-    path: "",
-  },
-
+  // {
+  //   title: "What Are Odds",
+  //   type: "/images/mobile_app_development.png",
+  //   description:
+  //     "It's a game app where opponent has to complete the challenge, if he lost",
+  //   thumbnail: "",
+  //   appLink: "",
+  //   path: "",
+  // },
   {
     title: "Family Law Assist",
     type: "/images/web_app_development.png",

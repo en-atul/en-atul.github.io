@@ -1,6 +1,34 @@
 import React from "react";
-import epam from "../../public/images/epam-h.png";
+import Epam from "../../public/images/epam-h.png";
+import Medium from "../../public/images/medium.png";
+import StackOverflow from "../../public/images/stack-overflow.png";
+import GitHub from "../../public/images/github.png";
+import LinkedIn from "../../public/images/linkedin.png";
+
 import Image from "next/image";
+
+const social = [
+  {
+    name: "Github",
+    url: "https://github.com/en-atul",
+    icon: GitHub,
+  },
+  {
+    name: "Medium",
+    url: "https://medium.com/@en-atul",
+    icon: Medium,
+  },
+  {
+    name: "Stack Overflow",
+    url: "https://stackoverflow.com/users/8731815/en-atul",
+    icon: StackOverflow,
+  },
+  {
+    name: "Linkedin",
+    url: "https://www.linkedin.com/in/en-atul/",
+    icon: LinkedIn,
+  },
+];
 
 export function CurrentlyAt() {
   return (
@@ -12,7 +40,7 @@ export function CurrentlyAt() {
         Currently&nbsp;→&nbsp;<span>Engineer</span> @&nbsp;
         <span className="relative pt-3">
           <Image
-            src={epam}
+            src={Epam}
             width={100}
             height={50}
             alt="epam logo"
@@ -39,6 +67,21 @@ export function CurrentlyAt() {
         expertise has enabled me to create high-quality, scalable, and reliable
         applications that meet the unique requirements of our clients.
       </p>
+
+      <div className="flex items-center pt-20 space-x-5">
+        {social.map((s, idx) => (
+          <a
+            key={idx}
+            href={s.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-3"
+            title={s.name}
+          >
+            <Image src={s.icon} width={30} height={30} alt={s.name} />
+          </a>
+        ))}
+      </div>
     </section>
   );
 }
