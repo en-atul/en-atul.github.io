@@ -7,6 +7,7 @@ import wellnite from "../../../public/images/wellnite.png";
 import distronix from "../../../public/images/distronix-2.png";
 import mki_legal from "../../../public/images/mki.png";
 import epam from "../../../public/images/epam.png";
+import atlassian from "../../../public/images/atlassian.png";
 
 const companiesDetails = [
   {
@@ -102,7 +103,7 @@ export function Companies() {
             key={idx}
             className="col-span-1 flex flex-col justify-center items-center bg-white border p-10 rounded-md"
           >
-            <div className="w-[80px] h-[70px]">
+            <div className="h-[70px] flex items-center">
               <Image
                 src={company.img}
                 width={company.dimension.width}
@@ -113,6 +114,21 @@ export function Companies() {
                 // }
                 style={{ objectFit: "contain" }}
               />
+              {company.path === "/work/epam" ? (
+                <div className="flex items-center">
+                  <p className="mx-5 text-2xl">→</p>
+                  <Image
+                    src={atlassian}
+                    width={company.dimension.width}
+                    height={company.dimension.height}
+                    alt={company.img.src}
+                    // className={
+                    //   company.duration.includes("Present") ? "" : "grayscale"
+                    // }
+                    style={{ objectFit: "contain" }}
+                  />
+                </div>
+              ) : null}
             </div>
 
             <p className="text-xl font-semibold mt-5">{company.name}</p>
@@ -123,7 +139,7 @@ export function Companies() {
 
             <Link href={company.path}>
               <p className="mt-4 text-blue-500 font-light border-b border-blue-500 cursor-pointer">
-                More Details
+                Work Details
               </p>
             </Link>
           </article>

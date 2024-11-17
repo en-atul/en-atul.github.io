@@ -1,5 +1,7 @@
 import React from "react";
-import Epam from "../../public/images/epam-h.png";
+// import Epam from "../../public/images/epam-h.png";
+import Atlassian from "../../public/images/atlassian.png";
+
 import Medium from "../../public/images/medium.png";
 import StackOverflow from "../../public/images/stack-overflow.png";
 import GitHub from "../../public/images/github.png";
@@ -38,10 +40,10 @@ export function CurrentlyAt() {
       </h1>
       <div className="text-black text-sm md:text-xl text-center mt-12 flex items-center">
         Currently&nbsp;→&nbsp;<span>Engineer</span> @&nbsp;
-        <span className="relative pt-3">
+        <span className="relative">
           <Image
-            src={Epam}
-            width={100}
+            src={Atlassian}
+            width={50}
             height={50}
             alt="epam logo"
             className="h-fit"
