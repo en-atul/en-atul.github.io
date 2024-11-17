@@ -71,6 +71,10 @@ const skills = [
     label: "Detox",
     borderColor: "border-blue-500",
   },
+  {
+    label: "Monorepo",
+    borderColor: "border-black",
+  },
 ];
 
 export function Skills() {

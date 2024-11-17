@@ -4,8 +4,8 @@ import React from "react";
 import { dateDiff } from "../../../utils";
 import steinnlabs from "../../../public/images/steinnlabs.jpeg";
 import wellnite from "../../../public/images/wellnite.png";
-import distronix from "../../../public/images/distronix.jpeg";
-import mki_legal from "../../../public/images/mki-legal.jpeg";
+import distronix from "../../../public/images/distronix-2.png";
+import mki_legal from "../../../public/images/mki.png";
 import epam from "../../../public/images/epam.png";
 
 const companiesDetails = [
@@ -31,8 +31,8 @@ const companiesDetails = [
     endDate: new Date("03-30-2024"),
     path: "/work/wellnite",
     dimension: {
-      width: 60,
-      height: 50,
+      width: 70,
+      height: 60,
     },
   },
   // {
@@ -57,8 +57,8 @@ const companiesDetails = [
     endDate: new Date("06-30-2021"),
     path: "/work/mki-legal",
     dimension: {
-      width: 70,
-      height: 70,
+      width: 60,
+      height: 60,
     },
   },
   {
@@ -70,8 +70,8 @@ const companiesDetails = [
     endDate: new Date("09-30-2020"),
     path: "/work/distronix",
     dimension: {
-      width: 100,
-      height: 100,
+      width: 50,
+      height: 80,
     },
   },
 ];
@@ -92,7 +92,7 @@ export function Companies() {
   return (
     <section
       id="experience"
-      className="flex flex-wrap justify-center gap-8 my-16"
+      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center gap-8 my-16 overflow-x-auto"
     >
       {companiesDetails.map((company, idx) => {
         const { months, years } = dateDiff(company.startDate, company.endDate);
@@ -100,22 +100,24 @@ export function Companies() {
         return (
           <article
             key={idx}
-            className="w-[30%] flex flex-col justify-center items-center p-10 bg-white border rounded-md"
+            className="col-span-1 flex flex-col justify-center items-center bg-white border p-10 rounded-md"
           >
-            <Image
-              src={company.img}
-              width={company.dimension.width}
-              height={company.dimension.height}
-              alt={company.img.src}
-              className={
-                company.duration.includes("Present") ? "" : "grayscale"
-              }
-              style={{ objectFit: "contain" }}
-            />
+            <div className="w-[80px] h-[70px]">
+              <Image
+                src={company.img}
+                width={company.dimension.width}
+                height={company.dimension.height}
+                alt={company.img.src}
+                // className={
+                //   company.duration.includes("Present") ? "" : "grayscale"
+                // }
+                style={{ objectFit: "contain" }}
+              />
+            </div>
 
             <p className="text-xl font-semibold mt-5">{company.name}</p>
-            <p>{company.role}</p>
-            <p>
+            <p className="text-gray-600">{company.role}</p>
+            <p className="text-gray-600">
               {company.duration} {formatDateString(years, months)}
             </p>
 

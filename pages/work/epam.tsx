@@ -105,7 +105,7 @@ export default function Wellnite() {
             priority
             placeholder="blur"
           />
-          <p className="mx-5 text-3xl">+</p>
+          <p className="mx-5 text-3xl">→</p>
           <Image
             src={Atlassian}
             width={120}
