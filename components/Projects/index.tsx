@@ -4,10 +4,20 @@ import React from "react";
 
 const projects = [
   {
+    title: "Jira",
+    type: "/images/web_app_development.png",
+    description:
+      "Jira is a project management tool used in software development to track issues, tasks, and bugs. It supports Agile methodologies like Scrum and Kanban, helping teams plan sprints and manage backlogs. Jira allows teams to customize workflows to fit their processes. It provides detailed reports for tracking progress and performance. Additionally, Jira integrates well with other tools like Bitbucket and Confluence.",
+    thumbnail: "",
+    appLink:
+      "https://www.atlassian.com/software/jira/service-management?campaign=17879825186&adgroup=139892810296&targetid=kwd-337837004861&matchtype=p&network=g&device=c&device_model=&creative=688006323065&keyword=jira%20service&placement=&target=&ds_eid=700000001721198&ds_e1=GOOGLE&gad_source=1&gclid=Cj0KCQiArby5BhCDARIsAIJvjISMnqRvn_VQLmvk2YW5N6msY7LoReBZzlX_FWpRMmAy-LOhdpn-PqAaAsS3EALw_wcB",
+    path: "",
+  },
+  {
     title: "Wellnite",
     type: "/images/web_app_development.png",
     description:
-      "Wellnite is a mental health app which helps people to overcome anxiety & depression",
+      "Wellnite Health is a mental health platform that offers accessible and personalized care, aiming to support individuals dealing with various challenges like anxiety, depression, and relationship issues. It provides services such as therapy sessions with licensed professionals and tools for tracking emotional well-being and mental health progress. Wellnite is designed to be flexible and affordable, with options for insurance coverage or out-of-pocket payment plans, making mental health care more reachable to a broader audience.",
     thumbnail: "",
     appLink: "https://www.wellnite.com/",
     path: "",
@@ -15,7 +25,7 @@ const projects = [
   {
     title: "DOPE.SECURITY",
     type: "/images/web_app_development.png",
-    description: `Dope Security is a secure web gateway (SWG) app is designed to filter, or block access to harmful websites and applications per company policy.`,
+    description: `Dope Security offers a next-gen Secure Web Gateway (SWG) that works directly on user devices, without using data centers. It provides faster, efficient security features like on-device SSL inspection and URL filtering. This setup keeps data secure and private, while also optimizing performance. It’s designed for both Mac and Windows, using minimal system resources. All security policies and monitoring can be managed from a central cloud console.`,
     thumbnail: "",
     appLink: "https://dope.security/",
     path: "",
@@ -71,7 +81,7 @@ const projects = [
   {
     title: "Satoshi Solutions",
     type: "/images/web_app_development.png",
-    description: `Satoshi Solutions is a crypto specialist recruitment app.`,
+    description: `Satoshi Solutions is a global recruitment company focused on blockchain talent, serving both startups and large enterprises. They specialize in connecting businesses with skilled professionals to meet technical needs. Their mission is to become the leading blockchain recruitment firm worldwide.`,
     thumbnail: "",
     appLink: "https://satoshisolutions.xyz/",
     path: "",

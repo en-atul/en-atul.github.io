@@ -7,13 +7,13 @@ import E2ETesting from "../../../public/images/e2e_testing.png";
 
 const companiesDetails = [
   {
-    name: "Web App Development",
+    name: "Web Development",
     role: "Reactjs | ReduxToolkit | Typescript | Javascript | TailwindCSS | Web Accessibility | Next.js | rxjs",
     img: WebDevelopment,
     duartion: "Oct 2020 - Present ·",
   },
   {
-    name: "Mobile App Development",
+    name: "Mobile Development",
     role: "React Native | ReduxToolkit | Typescript | Javascript",
     img: MobileAppDevelopment,
     duartion: "Mar 2021 - Jul 2022 ·",
@@ -25,8 +25,8 @@ const companiesDetails = [
     duartion: "Apr 2021 - Jun 2022 ·",
   },
   {
-    name: "E2E Testing",
-    role: "Jest | React Testing Library",
+    name: "Unit/Integration/E2E Testing",
+    role: "Cypress | Detox | Jest | React Testing Library",
     img: E2ETesting,
     duartion: "Apr 2021 - Jun 2022 ·",
   },

@@ -64,8 +64,12 @@ const skills = [
   },
 
   {
-    label: "React Packages",
-    borderColor: "border-cyan-500",
+    label: "NPM Packages",
+    borderColor: "border-red-500",
+  },
+  {
+    label: "Detox",
+    borderColor: "border-blue-500",
   },
 ];
 
