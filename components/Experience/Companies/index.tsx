@@ -49,32 +49,32 @@ const companiesDetails = [
   //     height: 50,
   //   },
   // },
-  {
-    name: "MKI Legal",
-    img: mki_legal,
-    role: "Software Developer | Freelance",
-    duration: "Apr 2021 - Jun 2022 ·",
-    startDate: new Date("04-01-2020"),
-    endDate: new Date("06-30-2021"),
-    path: "/work/mki-legal",
-    dimension: {
-      width: 60,
-      height: 60,
-    },
-  },
-  {
-    name: "Distronix",
-    img: distronix,
-    role: "Frontend Developer",
-    duration: "Jun 2020 - Sep 2020 ·",
-    startDate: new Date("06-01-2020"),
-    endDate: new Date("09-30-2020"),
-    path: "/work/distronix",
-    dimension: {
-      width: 50,
-      height: 80,
-    },
-  },
+  // {
+  //   name: "MKI Legal",
+  //   img: mki_legal,
+  //   role: "Software Developer | Freelance",
+  //   duration: "Apr 2021 - Jun 2022 ·",
+  //   startDate: new Date("04-01-2020"),
+  //   endDate: new Date("06-30-2021"),
+  //   path: "/work/mki-legal",
+  //   dimension: {
+  //     width: 60,
+  //     height: 60,
+  //   },
+  // },
+  // {
+  //   name: "Distronix",
+  //   img: distronix,
+  //   role: "Frontend Developer",
+  //   duration: "Jun 2020 - Sep 2020 ·",
+  //   startDate: new Date("06-01-2020"),
+  //   endDate: new Date("09-30-2020"),
+  //   path: "/work/distronix",
+  //   dimension: {
+  //     width: 50,
+  //     height: 80,
+  //   },
+  // },
 ];
 
 const formatDateString = (y: number, m: number) => {
@@ -93,7 +93,7 @@ export function Companies() {
   return (
     <section
       id="experience"
-      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center gap-8 my-16 overflow-x-auto"
+      className="flex flex-wrap justify-center gap-8 my-16 overflow-x-auto"
     >
       {companiesDetails.map((company, idx) => {
         const { months, years } = dateDiff(company.startDate, company.endDate);
@@ -101,7 +101,7 @@ export function Companies() {
         return (
           <article
             key={idx}
-            className="col-span-1 flex flex-col justify-center items-center bg-white border p-10 rounded-md"
+            className="w-[35%] flex flex-col justify-center items-center bg-white border p-10 rounded-md"
           >
             <div className="h-[70px] flex items-center">
               <Image
