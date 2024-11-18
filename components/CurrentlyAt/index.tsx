@@ -45,7 +45,7 @@ export function CurrentlyAt() {
             src={Atlassian}
             width={50}
             height={50}
-            alt="epam logo"
+            alt="atlassian logo"
             className="h-fit"
           />
         </span>
