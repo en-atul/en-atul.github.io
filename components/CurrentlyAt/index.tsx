@@ -53,14 +53,14 @@ export function CurrentlyAt() {
         {/* <span className="bg-[#0b66e4] px-5 py-1 text-white">Atlassian</span> */}
       </div>
       <p className="max-w-3xl mx-auto mt-5 text-center">
-        Software Engineer at Epam and have a strong focus on both web and mobile
-        applications using Javascript with 4+ years experience. Graduated from a
-        Bachelor&apos;s course in Computer Science, which has equipped me with
-        the necessary skills for a successful career in the IT field. I am a
-        fast learner and can easily adapt to different work environments. I am
-        always seeking to be part of a company that values quality, performance,
-        and ethics. I believe this will enable me to explore new opportunities
-        and build long-lasting experience.
+        Senior Software Engineer at Atlassian and have a strong focus on both
+        web and mobile applications using Javascript with 4+ years experience.
+        Graduated from a Bachelor&apos;s course in Computer Science, which has
+        equipped me with the necessary skills for a successful career in the IT
+        field. I am a fast learner and can easily adapt to different work
+        environments. I am always seeking to be part of a company that values
+        quality, performance, and ethics. I believe this will enable me to
+        explore new opportunities and build long-lasting experience.
         <br />
         <br />
         Extensive experience includes working with a wide range of technologies,
