@@ -1,0 +1,107 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Atul Kumar',
+  date: '2024-09-02',
+  title: 'Why we should prefer @compiled/react over styled-components?',
+  description: `@compiled/react is a high-performance CSS-in-JS library that compiles styles at build time, resulting in smaller bundle sizes and faster runtime performance. It offers seamless TypeScript support, better scalability, and superior integration with existing CSS tooling. Compared to styled-components, it provides a more efficient, maintainable solution for large-scale applications.`,
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## Why We Should Prefer `@compiled/react` Over `styled-components`?
+
+In the world of modern web development, styling is a critical aspect of building maintainable, scalable, and efficient user interfaces. Over the years, several CSS-in-JS libraries have emerged, offering solutions for handling styles in JavaScript. One of the most popular libraries for this purpose has been `styled-components`. However, with the introduction of `@compiled/react`, developers now have an alternative that provides several advantages over `styled-components`. In this article, we'll explore why you might prefer `@compiled/react` over `styled-components` for your projects.
+
+### 1. **Performance Optimization**
+
+One of the standout features of `@compiled/react` is its performance optimization. While `styled-components` relies on dynamically injecting styles into the DOM at runtime, `@compiled/react` takes a more efficient approach by generating optimized static styles during build time. This means that styles are compiled ahead of time, resulting in faster runtime performance and reduced JavaScript bundle sizes.
+
+#### Benefits:
+
+- **Reduced runtime overhead**: `@compiled/react` eliminates the need to inject styles dynamically, improving page load speeds.
+- **Lower JavaScript bundle size**: Since the styles are precompiled, you won't need to carry the overhead of CSS-in-JS logic at runtime.
+- **Optimized CSS**: The generated CSS is optimized for performance, which can lead to faster rendering times and a smoother user experience.
+
+### 2. **Smaller Bundle Size**
+
+One of the biggest concerns when working with JavaScript-based styling solutions like `styled-components` is the additional bundle size. `styled-components` includes a fair amount of runtime code to handle its dynamic style injection and CSS generation. This can add significant size to your JavaScript bundles, particularly in large applications.
+
+In contrast, `@compiled/react` significantly reduces bundle size by shifting the work to the build process. The CSS is precompiled into static styles, meaning there's less runtime code, and your JavaScript bundles remain leaner and more efficient.
+
+#### Benefits:
+
+- **Smaller initial load**: With less runtime overhead, your application loads faster.
+- **Fewer dependencies**: By using `@compiled/react`, you can avoid the need for large CSS-in-JS runtime libraries.
+
+### 3. **Better Developer Experience**
+
+The development experience is a crucial factor when choosing a styling solution. Both `@compiled/react` and `styled-components` provide a similar API for defining styles, but `@compiled/react` comes with a few key enhancements that improve productivity.
+
+#### TypeScript Support:
+
+`@compiled/react` offers out-of-the-box TypeScript support, which is critical for modern JavaScript applications. The library ensures that TypeScript works seamlessly, offering proper type-checking and autocompletion, making it easier for developers to work with styles in their code.
+
+#### Styled Variants:
+
+`@compiled/react` also includes a powerful variant system that allows developers to define reusable style variants easily. This feature simplifies the management of multiple style variations in your components, making your codebase cleaner and more maintainable.
+
+#### Benefits:
+
+- **TypeScript support**: Enhanced TypeScript integration helps prevent bugs and improves code quality.
+- **Declarative styling variants**: Easily manage and reuse styles with variants, reducing the need for manual overrides or complex conditional logic.
+
+### 4. **Better Integration with CSS Tools**
+
+Another benefit of `@compiled/react` is its superior integration with traditional CSS tooling. It generates static CSS files that can be further processed by build tools like PostCSS or CSS minifiers. This allows you to leverage the full power of existing CSS tools while still enjoying the benefits of a CSS-in-JS approach.
+
+This is in contrast to `styled-components`, which often requires special configurations or workarounds to integrate with existing CSS tooling, and sometimes lacks the fine-grained control that developers might need for advanced CSS processing.
+
+#### Benefits:
+
+- **Integration with PostCSS, minifiers, and other tools**: Use the entire CSS ecosystem to optimize your styles.
+- **Access to advanced CSS features**: Benefit from features like autoprefixing and CSS minification, which might require additional configurations in `styled-components`.
+
+### 5. **Scalability and Maintainability**
+
+As your project grows, maintaining a large codebase of dynamic styles can become challenging. While `styled-components` can work well for smaller applications, larger codebases often suffer from issues like inconsistent style management, bloated JavaScript bundles, and hard-to-debug styles.
+
+`@compiled/react` provides a more scalable solution by compiling the styles into static CSS. This leads to a more predictable and maintainable approach to styling. You can easily manage styles at the CSS level, allowing you to benefit from the full power of CSS for performance optimization and debugging.
+
+#### Benefits:
+
+- **Predictable styling**: Static CSS makes it easier to track and debug styles.
+- **Seamless integration with CSS tools**: You can scale your project without worrying about complex dynamic style injections or large JavaScript bundles.
+
+### 6. **Fewer Re-renders**
+
+Both `@compiled/react` and `styled-components` apply styles dynamically based on props, but `@compiled/react` does this in a way that reduces unnecessary re-renders. This is achieved by precomputing the styles and making sure only the necessary components are re-rendered when their styles change, leading to better performance in large applications.
+
+#### Benefits:
+
+- **Reduced re-renders**: More efficient rendering leads to faster updates and less strain on the UI thread.
+- **Improved application performance**: By reducing unnecessary re-renders, `@compiled/react` helps keep your app responsive and performant.
+
+### 7. **CSS Custom Properties Support**
+
+`@compiled/react` also provides built-in support for CSS custom properties (CSS variables), which allows for more dynamic and flexible styling. With CSS custom properties, you can define values that can be reused across your styles, and they can be updated at runtime without a full re-render.
+
+This feature can be particularly useful in large applications where you need to update styles dynamically based on user preferences, themes, or other conditions.
+
+#### Benefits:
+
+- **Dynamic theming**: Easily manage and update themes or other styles without re-rendering the entire component.
+- **Better performance with runtime style changes**: Custom properties allow for efficient and dynamic style updates.
+
+---
+
+### Conclusion
+
+While `styled-components` has been a popular choice for CSS-in-JS in React applications, `@compiled/react` offers several advantages that make it a strong alternative, particularly for performance-critical and large-scale applications. By precompiling styles, reducing runtime overhead, and integrating better with CSS tools, `@compiled/react` provides a more efficient and maintainable solution for managing styles in modern web applications.
+
+If you're looking for a CSS-in-JS library that offers better performance, smaller bundle sizes, and a more scalable approach to styling, `@compiled/react` is certainly worth considering.

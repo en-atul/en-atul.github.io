@@ -1,0 +1,186 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import designSystem from './app-security.webp'
+
+export const article = {
+  author: 'Atul Kumar',
+  date: '2024-09-05',
+  title: 'Securing Data in React Native Applications with Encryption',
+  description:
+    'Data security is crucial for protecting sensitive information and maintaining user trust in mobile applications. Without proper encryption, stored data on Android and iOS devices can be vulnerable to unauthorized access, even with sandboxing. This blog emphasizes the importance of encrypting data and securely managing keys to prevent exploitation. Ensure confidentiality and safeguard user privacy with effective security practices.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+Data security is a fundamental aspect of modern application development. It ensures user trust, protects sensitive information, and upholds confidentiality. While domains like finance and healthcare often prioritize stringent security measures, every app—regardless of its domain—should integrate robust data protection practices. This article will guide you through implementing data encryption in a React Native application using efficient and widely adopted libraries.
+
+<Image src={designSystem} alt="" />
+
+### Why Is Data Security Essential?
+
+Data security is critical because even if your app follows all security best practices during its operation, it might overlook protecting sensitive information stored locally on the device. On both Android and iOS, app sandboxing generally prevents one app from directly accessing another app's data. However, malicious actors can exploit vulnerabilities in the operating system, other apps, or improperly secured storage mechanisms to gain unauthorized access.
+
+For instance:
+
+- **Android**: If sensitive data is saved in plain text or without proper encryption in local storage (like `AsyncStorage`, SQLite, or external storage), it can be accessed by anyone with physical access to the device or through malware exploiting unpatched vulnerabilities.
+- **iOS**: While the iOS environment offers strong protections like the Keychain for securely storing sensitive data, saving unencrypted data in places like `UserDefaults` or local files can still expose it to threats if the device is jailbroken or compromised.
+
+This risk is heightened when attackers target devices indirectly by exploiting another app or service. Thus, encrypting data before saving it ensures that even if unauthorized access occurs, the data remains secure and unreadable without the encryption key.
+
+By proactively encrypting sensitive data, you not only mitigate these risks but also demonstrate a commitment to user privacy and trust—key factors in building a secure and reliable application.
+
+### Why `react-native-keychain`?
+
+`react-native-keychain` simplifies secure data storage by leveraging the native security features of Android and iOS:
+
+- **iOS**: It uses the iOS Keychain, which securely stores small pieces of data like passwords and cryptographic keys. Data stored here is protected even if the app is uninstalled or the device is locked.
+- **Android**: It uses the Android Keystore system to securely store keys, preventing access from other apps or processes. This ensures even rooted devices have limited exposure to sensitive data.
+
+By using `react-native-keychain`, you can store encryption keys securely at the OS level, significantly reducing the risk of exposing sensitive information to unauthorized access.
+
+### Why Not Store Keys in Plaintext?
+
+Storing keys in plaintext, such as within the app’s codebase, file system, or AsyncStorage, is highly insecure. If an attacker gains access to these storage areas, they can easily retrieve the keys, rendering encryption useless. The secure storage offered by `react-native-keychain` ensures keys are protected against such vulnerabilities.
+Hardcoding encryption keys defeats the purpose of encryption. Instead, secure keys should either be:
+
+- Stored at the OS level (e.g., Keychain or Shared Preferences), or
+- Pulled from a remote server (though this introduces additional complexity and overhead).
+
+We'll use two libraries:
+
+1. **`crypto`**: For encrypting and decrypting data.
+2. **`react-native-keychain`**: To securely generate and store encryption keys at the OS level (iOS Keychain or Android Shared Preferences).
+
+---
+
+## Implementation: Encrypting and Decrypting Data
+
+### 1. **Encryption Function**
+
+The `encryptData` function encrypts data using a secure key retrieved from the Keychain.
+
+```typescript
+async function encryptData(
+  key: KEYCHAIN_SERVICE_NAME,
+  data: string,
+): Promise<string> {
+  // Retrieve the encryption key from Keychain
+  const keychainItem = await Keychain.getGenericPassword({ service: key })
+
+  // Handle missing or invalid keys
+  if (
+    !keychainItem ||
+    typeof keychainItem === 'boolean' ||
+    !keychainItem.password
+  ) {
+    logger.info(`Key not found for ${key}. Generating a new one.`)
+    await generateAndStoreKey(key) // Create a new key
+    const newKeychainItem = await Keychain.getGenericPassword({ service: key })
+    if (!newKeychainItem || !newKeychainItem.password) {
+      throw new Error('Key retrieval failed after generation.')
+    }
+    return encryptData(key, data) // Retry encryption with the new key
+  }
+
+  // Parse the encryption key
+  const encryptionKey = CryptoJS.enc.Base64.parse(keychainItem.password)
+  const iv = CryptoJS.lib.WordArray.random(MAX_IV_LENGTH) // Generate a random IV
+
+  // Encrypt the data using AES
+  const encrypted = CryptoJS.AES.encrypt(data, encryptionKey, { iv })
+
+  // Return combined IV and encrypted data
+  return iv.toString(CryptoJS.enc.Base64) + ':' + encrypted.toString()
+}
+```
+
+### 2. **Decryption Function**
+
+The `decryptData` function reverses the encryption process, retrieving and decrypting data using the stored key.
+
+```typescript
+async function decryptData(
+  key: KEYCHAIN_SERVICE_NAME,
+  encryptedData: string,
+): Promise<string> {
+  // Retrieve the encryption key from Keychain
+  const keychainItem = await Keychain.getGenericPassword({ service: key })
+
+  // Handle missing or invalid keys
+  if (
+    !keychainItem ||
+    typeof keychainItem === 'boolean' ||
+    !keychainItem.password
+  ) {
+    logger.info(`Key not found for ${key}. Generating a new one.`)
+    await generateAndStoreKey(key) // Create a new key
+    const newKeychainItem = await Keychain.getGenericPassword({ service: key })
+    if (!newKeychainItem || !newKeychainItem.password) {
+      throw new Error('Key retrieval failed after generation.')
+    }
+    return decryptData(key, encryptedData) // Retry decryption with the new key
+  }
+
+  // Parse the encryption key and extract IV and encrypted data
+  const encryptionKey = CryptoJS.enc.Base64.parse(keychainItem.password)
+  const [ivBase64, encryptedBase64] = encryptedData.split(':')
+  const iv = CryptoJS.enc.Base64.parse(ivBase64)
+  const encrypted = CryptoJS.enc.Base64.parse(encryptedBase64)
+
+  // Create CipherParams for decryption
+  const cipherParams = CryptoJS.lib.CipherParams.create({
+    ciphertext: encrypted,
+    iv,
+  })
+
+  // Decrypt the data
+  const decrypted = CryptoJS.AES.decrypt(cipherParams, encryptionKey)
+  return decrypted.toString(CryptoJS.enc.Utf8) // Return the plaintext
+}
+```
+
+### 3. **Key Generation and Storage**
+
+The `generateAndStoreKey` function creates a secure key and stores it using `react-native-keychain`.
+
+```typescript
+async function generateAndStoreKey(
+  keyName: KEYCHAIN_SERVICE_NAME,
+): Promise<void> {
+  const encryptionKey = CryptoJS.lib.WordArray.random(256 / 8).toString(
+    CryptoJS.enc.Base64,
+  )
+  await Keychain.setGenericPassword(keyName, encryptionKey, {
+    service: keyName,
+  })
+  logger.info(`Key generated and stored securely for ${keyName}`)
+}
+```
+
+---
+
+## How It Works
+
+1. **Encryption**:
+
+   - Retrieve the key from the Keychain.
+   - If the key doesn’t exist, generate and store it.
+   - Encrypt data with the retrieved key and a randomly generated Initialization Vector (IV).
+   - Store the combined IV and encrypted data in phone memory.
+
+2. **Decryption**:
+   - Retrieve the key from the Keychain.
+   - Extract the IV and encrypted data.
+   - Use the key and IV to decrypt the data, restoring the original plaintext.
+
+---
+
+## Conclusion
+
+By following these steps, you can secure sensitive data in your React Native applications with minimal overhead. Leveraging `crypto` for encryption and `react-native-keychain` for secure key management provides a reliable foundation for data security.
+
+Remember, securing data isn't just a feature; it's a responsibility. Implementing encryption ensures user trust and safeguards their privacy in an increasingly interconnected world.

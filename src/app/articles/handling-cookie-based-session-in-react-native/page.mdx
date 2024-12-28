@@ -1,0 +1,158 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import designSystem from './cookie-flow.gif'
+
+export const article = {
+  author: 'Atul Kumar',
+  date: '2024-10-10',
+  title: 'Handling a Cookie-Based Session in React Native',
+  description:
+    'Managing user sessions is critical for secure and seamless application experiences. For Planetaria, we not only focused on creating a futuristic design but also optimized session management to deliver reliability and performance in a mobile-first world.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+Authentication is a cornerstone of modern application development, providing users with secure access to resources while maintaining consistent session management. In secure apps that rely on user sessions for API interactions, choosing the right session management strategy is crucial. Options like JWT (JSON Web Tokens), cookie-based sessions, and OAuth flows are widely used, with each offering distinct advantages and challenges.
+
+<Image src={designSystem} alt="" />
+
+This post explores the nuances of implementing **cookie-based session management** in React Native applications for both iOS and Android platforms. While web applications handle cookies seamlessly, integrating them into mobile applications introduces unique challenges, particularly in environments where native systems manage cookies by default.
+
+> **Key Tool:** We'll leverage the `react-native-cookies` library to extract cookies from server responses and manage them effectively during API requests. This library complements HTTP request libraries like Axios, enabling robust and streamlined cookie management.
+
+## Native Cookie Management in React Native
+
+React Native has built-in support for cookie management through its underlying web engines on iOS (WebKit) and Android (Chromium). However, efficiently managing cookies for API requests can be quite challenging. When you try to set up an interceptor (for example, using libraries like [axios](#)) to capture and inject cookies manually, you may encounter an issue where cookies you inject into requests are overridden by the native cookie management system.
+
+This default behavior means that even if you explicitly add cookies to the headers of your API requests, React Native’s native cookie management can interfere, causing unexpected results. The native environment may not consistently respect the cookies you try to handle manually.
+
+## Strategies for Managing Cookies in React Native
+
+1. Manually Saving and Injecting Cookies
+
+To avoid conflicts with native cookie handling, you can store cookies in persistent storage solutions like `AsyncStorage` or `MMKVStorage`. This approach involves clearing native cookies for each request and manually injecting stored cookies into the request headers. Although this method introduces a slight overhead, it ensures reliable session management.
+
+#### Example: Saving Cookies in Storage
+
+Use an Axios response interceptor to extract cookies from server responses and save them in storage:
+
+```c
+// Interceptor to save cookies from the response
+api.interceptors.response.use(
+	async response => {
+		const setCookieHeader =
+			response.headers['set-cookie'] || response.headers['Set-Cookie'];
+
+		if (setCookieHeader?.[0]) {
+			await mmkvStorage.setItem(config.baseURL, setCookieHeader[0]);
+		}
+		return response;
+	},
+	error => {
+		return Promise.reject(error);
+	},
+);
+```
+
+Before each API call, clear cookies using the `clearAll` method from CookieManager to prevent interference from native cookies:
+
+```c
+// clear cookies
+const clearCookies = async (): Promise<void> => {
+	await CookieManager.clearAll();
+};
+```
+
+To inject cookie with every API call we use `axios`'s request interceptor where we'll first clear cookies so that natively save cookies don't interfere with our custom implementation. then we'll fetched the saving cookie from storage and inject it in header:
+
+```c
+// Interceptor to add cookies to the request headers
+api.interceptors.request.use(async config => {
+	await clearCookies();
+	const cookieHeader = mmkvStorage.getItem('cookie');
+	if (cookieHeader) {
+		config.headers.Cookie = cookieHeader;
+	}
+	return config;
+});
+```
+
+2. Using `react-native-cookies` for Direct Management
+
+A more integrated approach involves using the react-native-cookies library to manage cookies directly. This library provides methods like setFromResponse to save cookies and get to retrieve them, offering a more seamless way to handle session authentication.
+
+Example: Managing Cookies with react-native-cookies
+Use an Axios response interceptor to extract cookies and save them using setFromResponse:
+
+```c
+// Interceptor to save cookies from the response
+api.interceptors.response.use(
+	async response => {
+		const setCookieHeader =
+			response.headers['set-cookie'] || response.headers['Set-Cookie'];
+
+		if (setCookieHeader?.[0]) {
+			await CookieManager.setFromResponse(config.baseURL, setCookieHeader[0]);
+		}
+		return response;
+	},
+	error => {
+		return Promise.reject(error);
+	},
+);
+```
+
+### Full Implementation Without Storing Cookies in External Storage
+
+Here’s a complete example using `react-native-cookies` for session management:
+
+```c
+import CookieManager from '@react-native-cookies/cookies';
+import axios from 'axios';
+
+const config = {
+	baseURL: 'http://localhost:3001',
+	domain: 'localhost',
+};
+
+const api = axios.create({
+	baseURL: config.baseURL,
+	withCredentials: true, // ensures that Axios sends cookies with requests
+});
+
+// Interceptor to save cookies from the response
+api.interceptors.response.use(
+	async response => {
+		const setCookieHeader =
+			response.headers['set-cookie'] || response.headers['Set-Cookie'];
+
+		if (setCookieHeader?.[0]) {
+			await CookieManager.setFromResponse(config.baseURL, setCookieHeader[0]);
+		}
+		return response;
+	},
+	error => {
+		return Promise.reject(error);
+	},
+);
+
+const getConfig = async () => {
+	try {
+		const res = await api.get('/api/config');
+		return res;
+	} catch (error) {
+		return Promise.reject(error);
+	}
+};
+
+```
+
+## Final Thoughts
+
+Managing cookie-based authentication in React Native applications can be challenging due to the complexities of native cookie handling. While native mechanisms may suffice for simple use cases, leveraging tools like react-native-cookies provides more control and consistency.
+
+By adopting one of the strategies outlined above, you can ensure secure and reliable session management, offering users a smooth and seamless experience. Always choose the approach that best aligns with your application's architecture, complexity, and requirements.
